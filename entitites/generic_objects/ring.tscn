@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://35rubp4wfliu"]
+
+[ext_resource type="Script" uid="uid://bqn20acmgph8l" path="res://entitites/generic_objects/ring.gd" id="1_ah7v3"]
+[ext_resource type="AudioStream" uid="uid://c2bep3rvvcvr3" path="res://audio/objects/RingStereo.wav" id="2_ms8jr"]
+[ext_resource type="PackedScene" uid="uid://bx3je5i8dhimx" path="res://assets/always_objects/Ring.glb" id="2_ybukb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ah7v3"]
+radius = 0.4
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ms8jr"]
+
+[node name="Ring" type="Area3D" unique_id=1156771655]
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("1_ah7v3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=254808611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_ah7v3")
+debug_color = Color(0.69064313, 0.49815506, 1.92523e-07, 0.41960785)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2050179811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+stream = ExtResource("2_ms8jr")
+attenuation_model = 2
+volume_db = -10.0
+max_db = 0.0
+max_distance = 10.0
+bus = &"SFX"
+
+[node name="Ring" parent="." unique_id=2134318658 instance=ExtResource("2_ybukb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=162586423]
+replication_config = SubResource("SceneReplicationConfig_ms8jr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

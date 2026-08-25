@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://ye4qppjpsys0"]
+
+[ext_resource type="Script" uid="uid://0t1qvvc6r7s8" path="res://scripts/Presentation/level_select.gd" id="1_rif6e"]
+[ext_resource type="FontFile" uid="uid://bixch23xfjpr0" path="res://assets/fonts/digital.ttf" id="2_p0wlc"]
+[ext_resource type="PackedScene" uid="uid://gosbc2ygnhyf" path="res://scenes/ui/level_select/level_select_option_button.tscn" id="3_2epne"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rif6e"]
+font = ExtResource("2_p0wlc")
+font_color = Color(1, 0.53333336, 0.6666667, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2epne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rif6e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3shnc"]
+font = ExtResource("2_p0wlc")
+font_size = 8
+font_color = Color(1, 1, 0, 1)
+
+[node name="LevelSelect" type="Control" unique_id=338013150]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rif6e")
+scene_paths = PackedStringArray("res://scenes/level/green_hill.tscn", "res://scenes/level/level.tscn", "res://scenes/level/StationSquare.tscn")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1255594288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MenuTick" type="AudioStreamPlayer" parent="." unique_id=1473185384]
+
+[node name="MenuTick2" type="AudioStreamPlayer" parent="." unique_id=499485960]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=956468727]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=853016290]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 0
+text = "
+MAP SELECT"
+label_settings = SubResource("LabelSettings_rif6e")
+horizontal_alignment = 1
+
+[node name="MenuHBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=838835283]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/MenuHBoxContainer" unique_id=1841322710]
+layout_mode = 2
+theme_override_constants/separation = 128
+theme_override_styles/separator = SubResource("StyleBoxEmpty_2epne")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MenuHBoxContainer" unique_id=543812565]
+layout_mode = 2
+size_flags_horizontal = 3
+follow_focus = true
+draw_focus_border = true
+
+[node name="MenuContainer" type="VBoxContainer" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer" unique_id=117124762]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="LevelSelectButton" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=347936004 instance=ExtResource("3_2epne")]
+layout_mode = 2
+
+[node name="LevelSelectButton2" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=434849154 instance=ExtResource("3_2epne")]
+layout_mode = 2
+
+[node name="LevelSelectButton3" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=64332774 instance=ExtResource("3_2epne")]
+layout_mode = 2
+
+[node name="LevelSelectButton4" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=872355050 instance=ExtResource("3_2epne")]
+layout_mode = 2
+
+[node name="LevelSelectButton5" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=131315075 instance=ExtResource("3_2epne")]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MenuHBoxContainer" unique_id=1894243807]
+layout_mode = 2
+theme_override_constants/separation = 128
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rif6e")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2098755990]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer2" unique_id=1718061016]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxEmpty_2epne")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=319656494]
+layout_mode = 2
+alignment = 1
+
+[node name="EntranceID" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1925146490 instance=ExtResource("3_2epne")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Style: Hardware"
+base_text = "Style:"
+
+[node name="Player1Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=908796161 instance=ExtResource("3_2epne")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player1: "
+base_text = "Player1: "
+
+[node name="Player2Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1023056502 instance=ExtResource("3_2epne")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player2: "
+base_text = "Player2: "
+
+[node name="Player3Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1293300181 instance=ExtResource("3_2epne")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player3: "
+base_text = "Player3: "
+
+[node name="Player4Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1975106088 instance=ExtResource("3_2epne")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player4: "
+base_text = "Player4: "
+
+[node name="LoadScreen" type="PanelContainer" parent="." unique_id=1574395978]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="LoadScreen" unique_id=385854756]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Loading..."
+label_settings = SubResource("LabelSettings_3shnc")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://be74p87haiew0"]
+
+[ext_resource type="Texture2D" uid="uid://ch0qorwyb5pk5" path="res://assets/characters/Sonic/SonicMDL_stx_eye.png" id="1_gutxf"]
+
+[resource]
+resource_name = "stx_eye"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_gutxf")

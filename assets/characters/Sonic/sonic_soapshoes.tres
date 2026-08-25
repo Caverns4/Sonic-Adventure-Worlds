@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dianj10yojqo7"]
+
+[ext_resource type="Texture2D" uid="uid://caxttdf8tve8s" path="res://assets/characters/Sonic/SonicMDL_sonic_soapshoes.png" id="1_tgnmi"]
+
+[resource]
+resource_name = "sonic_soapshoes"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_tgnmi")

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://b8jb433icymkw"]
+
+[ext_resource type="Script" uid="uid://d0dgljwwl463n" path="res://scripts/level.gd" id="1_afk4w"]
+[ext_resource type="PackedScene" uid="uid://2tp0s831sdde" path="res://assets/levels/GHZ/GreenHillTest.glb" id="2_afk4w"]
+[ext_resource type="AudioStream" uid="uid://b2l3dsy31xtjf" path="res://audio/music/g_hill.ogg" id="2_dtv4y"]
+[ext_resource type="PackedScene" uid="uid://bylfuoelb7mxn" path="res://assets/levels/GHZ/Objects/GHZTree.glb" id="9_2kmdv"]
+[ext_resource type="PackedScene" uid="uid://35rubp4wfliu" path="res://entitites/generic_objects/ring.tscn" id="9_4uo7t"]
+[ext_resource type="PackedScene" uid="uid://dywunkm3nx6eo" path="res://entitites/generic_objects/dashpanel.tscn" id="9_bsto3"]
+[ext_resource type="Texture2D" uid="uid://ds8gapsdpyff2" path="res://assets/levels/WaterLgTx.png" id="10_4uo7t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bsto3"]
+sky_top_color = Color(0, 0, 0.53333336, 1)
+sky_horizon_color = Color(0.6666667, 0.8, 0.93333334, 1)
+sky_curve = 0.014710923
+ground_bottom_color = Color(0, 0.53333336, 0.93333334, 1)
+ground_horizon_color = Color(0.6666667, 0.8, 0.93333334, 1)
+ground_curve = 0.027320823
+
+[sub_resource type="Sky" id="Sky_m7fuw"]
+sky_material = SubResource("ProceduralSkyMaterial_bsto3")
+
+[sub_resource type="Environment" id="Environment_ikpon"]
+background_mode = 2
+sky = SubResource("Sky_m7fuw")
+ambient_light_color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+ambient_light_sky_contribution = 0.0
+fog_enabled = true
+fog_light_color = Color(0.26666668, 0.4, 0.6666667, 1)
+fog_sky_affect = 0.0
+volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kmdv"]
+cull_mode = 2
+albedo_texture = ExtResource("10_4uo7t")
+metallic = 0.75
+metallic_specular = 1.0
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_p2siw"]
+material = SubResource("StandardMaterial3D_2kmdv")
+size = Vector2(250, 250)
+orientation = 1
+
+[node name="GreenHill" type="Node3D" unique_id=240470333]
+script = ExtResource("1_afk4w")
+level_music = ExtResource("2_dtv4y")
+
+[node name="Environment" type="Node3D" parent="." unique_id=830909141]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=230543492]
+environment = SubResource("Environment_ikpon")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=171686465]
+transform = Transform3D(0.25881907, -0.48296294, 0.8365159, -0.9659263, -0.1294096, 0.22414388, 0, -0.8660254, -0.50000024, 0, 4, 0)
+shadow_enabled = true
+shadow_blur = 0.5
+
+[node name="PlayersContainer" type="Node3D" parent="." unique_id=1638711556]
+
+[node name="RingContainer" type="Node3D" parent="." unique_id=2102072307]
+
+[node name="Ring" parent="RingContainer" unique_id=1156771655 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -13)
+
+[node name="Ring2" parent="RingContainer" unique_id=1647847478 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -14)
+
+[node name="Ring3" parent="RingContainer" unique_id=564061607 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -15)
+
+[node name="Ring4" parent="RingContainer" unique_id=960848887 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -30)
+
+[node name="Ring5" parent="RingContainer" unique_id=919759153 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -31)
+
+[node name="Ring6" parent="RingContainer" unique_id=1934052795 instance=ExtResource("9_4uo7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -32)
+
+[node name="ObjectsContainer" type="Node3D" parent="." unique_id=545927497]
+
+[node name="Dashpanel" parent="ObjectsContainer" unique_id=620340897 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -113.95014, -26.171055, -443.8093)
+
+[node name="Dashpanel2" parent="ObjectsContainer" unique_id=1927178634 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.95014, -26.171055, -443.8093)
+
+[node name="Dashpanel3" parent="ObjectsContainer" unique_id=2006471686 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -107.95014, -26.171055, -443.8093)
+
+[node name="Dashpanel4" parent="ObjectsContainer" unique_id=127292134 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -110.95014, -14.171055, -467.8093)
+
+[node name="Dashpanel5" parent="ObjectsContainer" unique_id=546936579 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -113.95014, -14.171055, -467.8093)
+
+[node name="Dashpanel6" parent="ObjectsContainer" unique_id=2022296717 instance=ExtResource("9_bsto3")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -116.95014, -14.171055, -467.8093)
+
+[node name="GHZTree" parent="ObjectsContainer" unique_id=644607386 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, -15)
+
+[node name="GHZTree5" parent="ObjectsContainer" unique_id=184082814 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, -26)
+
+[node name="GHZTree6" parent="ObjectsContainer" unique_id=334296281 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, -37)
+
+[node name="GHZTree7" parent="ObjectsContainer" unique_id=1096663625 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -2, -53)
+
+[node name="GHZTree8" parent="ObjectsContainer" unique_id=1906321746 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -5, -66)
+
+[node name="GHZTree2" parent="ObjectsContainer" unique_id=144559029 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, -7)
+
+[node name="GHZTree3" parent="ObjectsContainer" unique_id=811581141 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, 1)
+
+[node name="GHZTree4" parent="ObjectsContainer" unique_id=614297819 instance=ExtResource("9_2kmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, 7)
+
+[node name="LevelContainer" type="Node3D" parent="." unique_id=1627768696]
+
+[node name="GreenHillTest" parent="LevelContainer" unique_id=890153675 instance=ExtResource("2_afk4w")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, -10, 0)
+
+[node name="greenhillzone" parent="LevelContainer/GreenHillTest" index="1" unique_id=1401128260]
+collision_layer = 9
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LevelContainer" unique_id=1705765764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 35)
+mesh = SubResource("QuadMesh_p2siw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LevelContainer" unique_id=1545449050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -37, -131)
+mesh = SubResource("QuadMesh_p2siw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LevelContainer" unique_id=298533898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -37, -381)
+mesh = SubResource("QuadMesh_p2siw")
+
+[editable path="LevelContainer/GreenHillTest"]

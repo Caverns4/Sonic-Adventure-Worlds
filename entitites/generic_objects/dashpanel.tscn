@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dywunkm3nx6eo"]
+
+[ext_resource type="Script" uid="uid://c8vyfvaweymkp" path="res://entitites/generic_objects/dash_panel.gd" id="1_hwqbi"]
+[ext_resource type="PackedScene" uid="uid://cv4gagoovppvs" path="res://assets/always_objects/DashPanel.glb" id="1_mikdr"]
+[ext_resource type="AudioStream" uid="uid://dyqmj6xlshyps" path="res://audio/objects/dash_panel.wav" id="3_hwqbi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mikdr"]
+size = Vector3(0.9433594, 0.45214844, 1.4294434)
+
+[node name="Dashpanel" type="Area3D" unique_id=620340897]
+collision_layer = 3
+collision_mask = 4096
+script = ExtResource("1_hwqbi")
+
+[node name="DashPanel" parent="." unique_id=1531258029 instance=ExtResource("1_mikdr")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2102416442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19097412, 0)
+shape = SubResource("BoxShape3D_mikdr")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1828393443]
+stream = ExtResource("3_hwqbi")
+attenuation_model = 3
+max_db = 0.0
+max_distance = 10.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="DashPanel"]

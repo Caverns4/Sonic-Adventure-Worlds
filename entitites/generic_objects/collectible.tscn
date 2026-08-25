@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dr7krxduj73x4"]
+
+[ext_resource type="Script" uid="uid://dt8tmdweqlfnv" path="res://entitites/generic_objects/collectible.gd" id="1_8au6a"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ah7v3"]
+radius = 0.4
+
+[node name="Generic_collectible" type="Area3D" unique_id=1156771655]
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("1_8au6a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=254808611]
+shape = SubResource("SphereShape3D_ah7v3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2050179811]
+attenuation_model = 3
+volume_db = -6.0
+max_db = 0.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

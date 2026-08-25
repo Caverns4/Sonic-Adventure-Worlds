@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://drogg7i7x3c7b"]
+
+[ext_resource type="Script" uid="uid://bg31e3vc0wiwe" path="res://scripts/physics_player.gd" id="1_rlyl0"]
+[ext_resource type="Script" uid="uid://dy0gj88wcbu1d" path="res://scripts/camera_rig.gd" id="2_5pf7s"]
+[ext_resource type="AudioStream" uid="uid://bul2hyno860tl" path="res://audio/player/s2br_Land.wav" id="3_7tjgl"]
+[ext_resource type="AudioStream" uid="uid://detjvx3r2grq0" path="res://audio/player/s2br_Jump.wav" id="3_rlyl0"]
+[ext_resource type="PackedScene" uid="uid://ffdyw86vrsm6" path="res://entitites/HUD/player_hud.tscn" id="4_7tjgl"]
+[ext_resource type="Script" uid="uid://daa2wfqeomcq0" path="res://scripts/State Machine/Player/player_free.gd" id="5_4i2fk"]
+[ext_resource type="Script" uid="uid://jko3bbm38hg7" path="res://scripts/State Machine/Player/player_air.gd" id="6_w3uin"]
+[ext_resource type="Script" uid="uid://bgkvydjw5fb2n" path="res://scripts/State Machine/Player/player_rolling.gd" id="7_jdvc7"]
+[ext_resource type="Script" uid="uid://fat8r2tgn3w" path="res://scripts/State Machine/Player/player_jumping.gd" id="8_em02n"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1j11v"]
+
+[node name="PhysicsPlayer" type="CharacterBody3D" unique_id=2099542631 node_paths=PackedStringArray("hud")]
+collision_layer = 4096
+collision_mask = 4099
+floor_snap_length = 0.25
+script = ExtResource("1_rlyl0")
+hud = NodePath("HUD")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=622665701]
+shape = SubResource("SphereShape3D_1j11v")
+
+[node name="FloorCheck" type="RayCast3D" parent="." unique_id=1515659441]
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=1234558393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+top_level = true
+script = ExtResource("2_5pf7s")
+camera_zoom_min = 2.0
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraRig" unique_id=1225321752]
+transform = Transform3D(1, 0, 0, 0, 0.98480767, 0.17364816, 0, -0.17364816, 0.98480767, 0, 0, 0)
+collision_mask = 8
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/SpringArm3D" unique_id=521910118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+cull_mask = 31
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CameraRig/SpringArm3D/Camera3D" unique_id=1515104884]
+layers = 3
+light_energy = 0.5
+light_cull_mask = 4293918723
+
+[node name="Pivot" type="Node3D" parent="." unique_id=484166385]
+
+[node name="FrontCheck" type="RayCast3D" parent="Pivot" unique_id=1130768844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="BackCheck" type="RayCast3D" parent="Pivot" unique_id=2047601943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.433, 0, 0.25)
+
+[node name="BackCheck2" type="RayCast3D" parent="Pivot" unique_id=309193951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.433, 0, 0.25)
+
+[node name="JumpSFX" type="AudioStreamPlayer3D" parent="." unique_id=255963621]
+stream = ExtResource("3_rlyl0")
+attenuation_model = 3
+unit_size = 5.0
+max_db = 1.0
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="LandSFX" type="AudioStreamPlayer3D" parent="." unique_id=2084552809]
+stream = ExtResource("3_7tjgl")
+attenuation_model = 3
+unit_size = 5.0
+max_db = 1.0
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="BrakeSFX" type="AudioStreamPlayer3D" parent="." unique_id=1900982292]
+bus = &"SFX"
+
+[node name="DynamicSFX" type="AudioStreamPlayer3D" parent="." unique_id=427873511]
+bus = &"SFX"
+
+[node name="StateContainer" type="Node" parent="." unique_id=263892785]
+
+[node name="Free" type="Node" parent="StateContainer" unique_id=126702971]
+script = ExtResource("5_4i2fk")
+state_name = &"Free"
+
+[node name="Air" type="Node" parent="StateContainer" unique_id=1160307431]
+script = ExtResource("6_w3uin")
+state_name = &"Air"
+
+[node name="Rolling" type="Node" parent="StateContainer" unique_id=736605606]
+script = ExtResource("7_jdvc7")
+state_name = &"Rolling"
+
+[node name="Jumping" type="Node" parent="StateContainer" unique_id=685194192]
+script = ExtResource("8_em02n")
+state_name = &"Jumping"
+
+[node name="HUD" parent="." unique_id=791427141 instance=ExtResource("4_7tjgl")]

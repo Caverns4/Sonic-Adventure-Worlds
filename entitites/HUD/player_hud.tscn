@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://ffdyw86vrsm6"]
+
+[ext_resource type="Script" uid="uid://bj4khrgi51j7j" path="res://entitites/HUD/player_hud.gd" id="1_vutuy"]
+[ext_resource type="FontFile" uid="uid://dh443d8vt2m4o" path="res://assets/fonts/Quantico-Regular.ttf" id="2_fd1vc"]
+[ext_resource type="Texture2D" uid="uid://d140f1h8n0n8s" path="res://assets/icons/zanki_sonic.png" id="3_cw4nv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cw4nv"]
+line_spacing = 0.0
+font = ExtResource("2_fd1vc")
+font_size = 36
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.69411767)
+
+[node name="HUD" type="CanvasLayer" unique_id=1934654868]
+script = ExtResource("1_vutuy")
+
+[node name="Top" type="Control" parent="." unique_id=791427141]
+layout_mode = 3
+anchor_right = 0.25
+anchor_bottom = 0.178
+offset_right = -320.0
+offset_bottom = -128.16
+mouse_filter = 2
+
+[node name="RingCount" type="Label" parent="Top" unique_id=1869566775]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 179.0
+offset_bottom = 117.0
+text = "RINGS:   0"
+label_settings = SubResource("LabelSettings_cw4nv")
+
+[node name="TimeCounter" type="Label" parent="Top" unique_id=1005654340]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 280.0
+offset_bottom = 85.0
+text = "TIME: 00:00:00"
+label_settings = SubResource("LabelSettings_cw4nv")
+
+[node name="ScoreCounter" type="Label" parent="Top" unique_id=122164492]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 280.0
+offset_bottom = 53.0
+text = "SCORE:    0"
+label_settings = SubResource("LabelSettings_cw4nv")
+
+[node name="Bottom" type="Control" parent="." unique_id=1118997042]
+layout_mode = 3
+anchor_top = 0.88900006
+anchor_right = 0.2
+anchor_bottom = 1.0
+offset_top = 79.91998
+offset_right = -256.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="LifeIcon" type="TextureRect" parent="Bottom" unique_id=765161666]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -80.0
+offset_right = 136.0
+offset_bottom = -16.0
+texture = ExtResource("3_cw4nv")
+stretch_mode = 2
+
+[node name="LifeCounter" type="Label" parent="Bottom" unique_id=792005935]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -72.0
+offset_right = 192.0
+offset_bottom = -16.0
+text = "3"
+label_settings = SubResource("LabelSettings_cw4nv")
+horizontal_alignment = 2

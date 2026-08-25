@@ -1,0 +1,56 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bx3je5i8dhimx"
+path="res://.godot/imported/Ring.glb-11c84691d2ddc879be2342b34037f4dc.scn"
+
+[deps]
+
+source_file="res://assets/always_objects/Ring.glb"
+dest_files=["res://.godot/imported/Ring.glb-11c84691d2ddc879be2342b34037f4dc.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:RingMDL_Hi": {
+"mesh_instance/visibility_range_end": 3.0
+},
+"PATH:RingMDL_Low": {
+"mesh_instance/visibility_range_begin": 10.0,
+"mesh_instance/visibility_range_end": 512.0
+},
+"PATH:RingMDL_Mid": {
+"mesh_instance/visibility_range_begin": 3.0,
+"mesh_instance/visibility_range_end": 10.0
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

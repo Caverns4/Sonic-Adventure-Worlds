@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bq670an7kghjx"]
+
+[ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_6ir7c"]
+[ext_resource type="PackedScene" uid="uid://ce6soitm3lwwi" path="res://assets/characters/Eggman_Walker/eggman.tscn" id="2_5tmjs"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6ir7c"]
+radius = 0.75
+
+[node name="EggmanPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_6ir7c")]
+character = 4
+player_skin = NodePath("Pivot/EggmanMDL")
+top_speed = 5.0
+jump_vel = 4.5
+y_button_ground_ability = ""
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=622665701]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_6ir7c")
+
+[node name="CameraRig" parent="." index="2" unique_id=1234558393]
+camera_zoom_min = 2.5
+
+[node name="EggmanMDL" parent="Pivot" parent_id_path=PackedInt32Array(484166385) index="3" unique_id=89315961 node_paths=PackedStringArray("parent") instance=ExtResource("2_5tmjs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.75, 0)
+parent = NodePath("../..")

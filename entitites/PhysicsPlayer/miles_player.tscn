@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ejlc0dqoef1q"]
+
+[ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_cvsgt"]
+[ext_resource type="PackedScene" uid="uid://b8s8iyxy7o84j" path="res://assets/characters/Miles/miles.tscn" id="2_1yikb"]
+[ext_resource type="AudioStream" uid="uid://21koellb870p" path="res://audio/player/s2br_MetalBrake.wav" id="3_1yikb"]
+
+[node name="Miles Player" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_cvsgt")]
+character = 2
+player_skin = NodePath("Pivot/MilesMDL2")
+
+[node name="MilesMDL2" parent="Pivot" parent_id_path=PackedInt32Array(484166385) index="3" unique_id=2060953266 node_paths=PackedStringArray("parent") instance=ExtResource("2_1yikb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
+parent = NodePath("../..")
+
+[node name="BrakeSFX" parent="." index="7" unique_id=1900982292]
+stream = ExtResource("3_1yikb")

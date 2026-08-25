@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsnp80ga5lqeu"]
+
+[ext_resource type="PackedScene" uid="uid://df2iwk8mlytnc" path="res://assets/characters/Knuckles/KnuckMDL.glb" id="1_5edre"]
+[ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_v2qnh"]
+[ext_resource type="Script" uid="uid://5ku70hdv1ykc" path="res://scripts/upgrade_model_handler.gd" id="3_v2qnh"]
+
+[node name="KnuckMDL" unique_id=1896508226 node_paths=PackedStringArray("animation_player") instance=ExtResource("1_5edre")]
+script = ExtResource("2_v2qnh")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="UpgardeModels" type="Node" parent="." index="2" unique_id=2097040989]
+script = ExtResource("3_v2qnh")
+shovel_claw = NodePath("../Knuck_Rig/Skeleton3D/Upg_ShovelClawMDL")
+air_necklace = NodePath("../Knuck_Rig/Skeleton3D/Upg_AirMDL")
+sunglasses = NodePath("../Knuck_Rig/Skeleton3D/Upg_SunglassesMDL")

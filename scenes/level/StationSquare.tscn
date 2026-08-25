@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ewqlaix55ns1"]
+
+[ext_resource type="Script" uid="uid://d0dgljwwl463n" path="res://scripts/level.gd" id="1_3824k"]
+[ext_resource type="AudioStream" uid="uid://c4kw0a1mns4wm" path="res://audio/music/s_square.ogg" id="2_ijoaf"]
+[ext_resource type="Texture2D" uid="uid://b5e8ss22i1l33" path="res://assets/skybox/kloofendal_48d_partly_cloudy_puresky.png" id="3_w7dyr"]
+[ext_resource type="PackedScene" uid="uid://b8jmer2pjrldh" path="res://scenes/level/StationSquare/stationSquareTest.glb" id="7_80jov"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w2cvh"]
+panorama = ExtResource("3_w7dyr")
+
+[sub_resource type="Sky" id="Sky_m7fuw"]
+sky_material = SubResource("PanoramaSkyMaterial_w2cvh")
+
+[sub_resource type="Environment" id="Environment_uyi3h"]
+background_mode = 2
+sky = SubResource("Sky_m7fuw")
+fog_enabled = true
+fog_light_color = Color(0.4310035, 0.4572096, 0.5313084, 1)
+fog_light_energy = 0.5
+fog_sky_affect = 0.0
+
+[node name="StationSquare" type="Node3D" unique_id=786128319]
+script = ExtResource("1_3824k")
+level_music = ExtResource("2_ijoaf")
+
+[node name="Environment" type="Node3D" parent="." unique_id=2134315477]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1744585209]
+environment = SubResource("Environment_uyi3h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=1608640553]
+transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0)
+shadow_enabled = true
+shadow_blur = 0.5
+
+[node name="PlayersContainer" type="Node3D" parent="." unique_id=1516660134]
+
+[node name="stationSquareTest" parent="." unique_id=854813589 instance=ExtResource("7_80jov")]
+
+[node name="ssact5" parent="stationSquareTest" index="4" unique_id=1559816772]
+collision_layer = 9
+
+[node name="@StaticBody3D@22574" parent="stationSquareTest" index="5" unique_id=1794033170]
+collision_layer = 9
+
+[node name="@StaticBody3D@22575" parent="stationSquareTest" index="6" unique_id=313441044]
+collision_layer = 9
+
+[editable path="stationSquareTest"]

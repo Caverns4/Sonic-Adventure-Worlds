@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqlenewuyryun"]
+
+[ext_resource type="Texture2D" uid="uid://m7pwkvdtjblm" path="res://assets/characters/Knuckles/KnuckMDL_ntx_itemx0.png" id="1_5jjij"]
+
+[resource]
+resource_name = "ntx_itemx0"
+cull_mode = 2
+albedo_texture = ExtResource("1_5jjij")
+metallic_specular = 0.0

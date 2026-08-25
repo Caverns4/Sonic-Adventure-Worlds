@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnw5s7uk1s8ch"]
+
+[ext_resource type="Texture2D" uid="uid://c3tttyqkbxo38" path="res://assets/characters/Sonic/SonicMDL_stx_ref00.png" id="1_76pq1"]
+
+[resource]
+resource_name = "stx_ref00"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_76pq1")
