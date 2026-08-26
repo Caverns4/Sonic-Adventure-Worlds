@@ -2,6 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://ckgg1q8svwn8r" path="res://assets/characters/Eggman_Walker/EggMechMDL.glb" id="1_32le3"]
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_1u12h"]
+[ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_taaro"]
+[ext_resource type="Texture2D" uid="uid://bowybeds7kyip" path="res://assets/characters/Eggman/EggmanMDL_egtx_02.png" id="4_hr38e"]
+[ext_resource type="Texture2D" uid="uid://cxefge8pury0v" path="res://assets/characters/Eggman_Walker/EggMechMDL_ew7.png" id="4_ubndd"]
+[ext_resource type="Material" uid="uid://c63duqtadl788" path="res://assets/characters/Eggman/egtx_05.tres" id="5_t1rkj"]
+[ext_resource type="Material" uid="uid://s56686nwbmso" path="res://assets/characters/Eggman/egtx_04.tres" id="6_r3y41"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ge71l"]
+render_priority = 0
+shader = ExtResource("3_taaro")
+shader_parameter/albedo_tex = ExtResource("4_hr38e")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fv108"]
+render_priority = 0
+shader = ExtResource("3_taaro")
+shader_parameter/albedo_tex = ExtResource("4_ubndd")
+shader_parameter/albedo_color = Color(1.353256, 1.353256, 1.3427868, 1)
 
 [node name="EggMechMDL" unique_id=1284735841 node_paths=PackedStringArray("animation_player") instance=ExtResource("1_32le3")]
 script = ExtResource("2_1u12h")
@@ -9,6 +26,14 @@ animation_player = NodePath("AnimationPlayer")
 
 [node name="Cannon_Large_MDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="1" unique_id=792243022]
 visible = false
+
+[node name="EggMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="2" unique_id=1283974261]
+surface_material_override/2 = SubResource("ShaderMaterial_ge71l")
+surface_material_override/4 = ExtResource("5_t1rkj")
+surface_material_override/6 = ExtResource("6_r3y41")
+
+[node name="Mech_BaseMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="3" unique_id=1313429268]
+surface_material_override/11 = SubResource("ShaderMaterial_fv108")
 
 [node name="PowerArmorMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="5" unique_id=433487152]
 visible = false

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c63duqtadl788"]
+
+[ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="1_6j8tc"]
+[ext_resource type="Texture2D" uid="uid://7k1770sjhfs8" path="res://assets/characters/Eggman/EggmanMDL_egtx_05.png" id="2_gkxl6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6j8tc")
+shader_parameter/albedo_tex = ExtResource("2_gkxl6")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)

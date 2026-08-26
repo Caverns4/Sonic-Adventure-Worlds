@@ -8,6 +8,8 @@
 [node name="Miles Player" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_cvsgt")]
 character = 2
 player_skin = NodePath("Pivot/MilesMDL2")
+x_button_ground_ability = "Spindash"
+y_button_ground_ability = "Rolling"
 
 [node name="MilesMDL2" parent="Pivot" parent_id_path=PackedInt32Array(484166385) index="3" unique_id=2060953266 node_paths=PackedStringArray("parent") instance=ExtResource("2_1yikb")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
