@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ccjsj8liua16"]
 
-[ext_resource type="Texture2D" uid="uid://b4acpayroweac" path="res://assets/characters/Knuckles/KnuckMDL_ntx_ref00.png" id="1_o6aqr"]
+[ext_resource type="Texture2D" uid="uid://b4acpayroweac" path="res://assets/characters/Knuckles/ntx_ref00.png" id="1_o6aqr"]
 
 [resource]
 resource_name = "ntx_ref00"

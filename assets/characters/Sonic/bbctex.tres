@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dtx7wyo1sl5jh"]
 
-[ext_resource type="Texture2D" uid="uid://cgk54qkpdxjhb" path="res://assets/characters/Sonic/SonicMDL_bbctex.png" id="1_ajlb2"]
+[ext_resource type="Texture2D" uid="uid://cgk54qkpdxjhb" path="res://assets/characters/Sonic/bbctex.png" id="1_ajlb2"]
 
 [resource]
 resource_name = "bbctex"

@@ -14431,43 +14431,6 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": 0
 }
-},
-"materials": {
-"knitemx": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/knitemx.tres",
-"use_external/path": "uid://dwu2urttvw5ru"
-},
-"ntx_00": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_00.tres",
-"use_external/path": "uid://cm3rv72c76xyp"
-},
-"ntx_01": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_01.tres",
-"use_external/path": "uid://ehej00r7sqpp"
-},
-"ntx_item01": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_item01.tres",
-"use_external/path": "uid://co6mabcve3b3i"
-},
-"ntx_itemx0": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_itemx0.tres",
-"use_external/path": "uid://cqlenewuyryun"
-},
-"ntx_ref00": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_ref00.tres",
-"use_external/path": "uid://ccjsj8liua16"
-},
-"ntx_s000": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/characters/Knuckles/ntx_s000.tres",
-"use_external/path": "uid://c5kpgn8b1yft5"
-}
 }
 }
 gltf/naming_version=2

@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d0roh0nq7b8s2"]
 
-[ext_resource type="Texture2D" uid="uid://bh0jagi27lmnl" path="res://assets/characters/Sonic/SonicMDL_sstx_02.png" id="1_8j8ld"]
+[ext_resource type="Texture2D" uid="uid://bh0jagi27lmnl" path="res://assets/characters/Sonic/sstx_02.png" id="1_8j8ld"]
 
 [resource]
 resource_name = "sstx_02"

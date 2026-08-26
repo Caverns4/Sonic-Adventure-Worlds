@@ -9,6 +9,7 @@ const LERP_VELOCITY: float = 0.15
 @export var animation_player: AnimationPlayer = null
 @export var jump_ball: NodePath = ''
 @export var super_state_handler: Node
+@export var attachments: Array[AnimatedAttachment] = []
 
 var last_anim: String = ''
 var next_anim: String = ''
@@ -80,6 +81,8 @@ func play_jump_animation(jump_type: String = "Jump") -> void:
 func apply_animation(anim_name: StringName = "") -> void:
 	if anim_name: next_anim = anim_name
 	if next_anim and next_anim != last_anim and animation_player:
+		for i: AnimatedAttachment in attachments:
+			i.change_animation(next_anim)
 		animation_player.play(next_anim)
 		last_anim = next_anim
 

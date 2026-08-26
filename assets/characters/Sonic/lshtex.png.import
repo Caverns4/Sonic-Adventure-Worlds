@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ulhj27y50e2q"
-path.s3tc="res://.godot/imported/MilesMDL_mtx_01.png-0f649839f78920045000212fefc4514e.s3tc.ctex"
+uid="uid://cuo4fse56yfm7"
+path.s3tc="res://.godot/imported/lshtex.png-4f0c272d30f8549bb4d78123ae7c3ecf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "76985a7a4a15777bfb564f435f381144"
+"md5": "c44ab623e9c5421eecec087afd497366"
 }
 
 [deps]
 
-source_file="res://assets/characters/Miles/MilesMDL_mtx_01.png"
-dest_files=["res://.godot/imported/MilesMDL_mtx_01.png-0f649839f78920045000212fefc4514e.s3tc.ctex"]
+source_file="res://assets/characters/Sonic/lshtex.png"
+dest_files=["res://.godot/imported/lshtex.png-4f0c272d30f8549bb4d78123ae7c3ecf.s3tc.ctex"]
 
 [params]
 

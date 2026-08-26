@@ -2,9 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://df2iwk8mlytnc" path="res://assets/characters/Knuckles/KnuckMDL.glb" id="1_5edre"]
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_v2qnh"]
+[ext_resource type="Material" uid="uid://cm3rv72c76xyp" path="res://assets/characters/Knuckles/ntx_00.tres" id="3_ocggu"]
 [ext_resource type="Script" uid="uid://5ku70hdv1ykc" path="res://scripts/upgrade_model_handler.gd" id="3_v2qnh"]
 [ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_ynpvs"]
-[ext_resource type="Texture2D" uid="uid://b4acpayroweac" path="res://assets/characters/Knuckles/KnuckMDL_ntx_ref00.png" id="4_buhyx"]
+[ext_resource type="Material" uid="uid://ehej00r7sqpp" path="res://assets/characters/Knuckles/ntx_01.tres" id="4_7slp2"]
+[ext_resource type="Texture2D" uid="uid://b4acpayroweac" path="res://assets/characters/Knuckles/ntx_ref00.png" id="4_buhyx"]
+[ext_resource type="Material" uid="uid://c5kpgn8b1yft5" path="res://assets/characters/Knuckles/ntx_s000.tres" id="5_oppy5"]
+[ext_resource type="Material" uid="uid://co6mabcve3b3i" path="res://assets/characters/Knuckles/ntx_item01.tres" id="6_e68fn"]
+[ext_resource type="Material" uid="uid://dwu2urttvw5ru" path="res://assets/characters/Knuckles/knitemx.tres" id="9_1hbca"]
+[ext_resource type="Material" uid="uid://cqlenewuyryun" path="res://assets/characters/Knuckles/ntx_itemx0.tres" id="10_v0dre"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mi4g"]
 render_priority = 0
@@ -16,10 +22,21 @@ shader_parameter/albedo_color = Color(1, 1, 1, 1)
 script = ExtResource("2_v2qnh")
 animation_player = NodePath("AnimationPlayer")
 
-[node name="Upg_ShovelClawMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1952638190) index="2" unique_id=1214774345]
-surface_material_override/0 = SubResource("ShaderMaterial_7mi4g")
+[node name="KnucklMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1207670564) index="0" unique_id=1268728053]
+surface_material_override/0 = ExtResource("3_ocggu")
+surface_material_override/1 = ExtResource("4_7slp2")
+surface_material_override/2 = ExtResource("5_oppy5")
 
-[node name="Upg_SunglassesMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1952638190) index="3" unique_id=188608705]
+[node name="Upg_AirMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1207670564) index="1" unique_id=160686590]
+visible = false
+surface_material_override/0 = ExtResource("6_e68fn")
+
+[node name="Upg_ShovelClawMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1207670564) index="2" unique_id=891517072]
+surface_material_override/0 = SubResource("ShaderMaterial_7mi4g")
+surface_material_override/1 = ExtResource("9_1hbca")
+
+[node name="Upg_SunglassesMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1207670564) index="3" unique_id=524748795]
+surface_material_override/0 = ExtResource("10_v0dre")
 surface_material_override/1 = SubResource("ShaderMaterial_7mi4g")
 
 [node name="UpgardeModels" type="Node" parent="." index="2" unique_id=2097040989]

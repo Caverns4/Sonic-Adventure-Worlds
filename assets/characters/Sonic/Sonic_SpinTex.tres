@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://8c4m6fyvhsv4"]
 
-[ext_resource type="Texture2D" uid="uid://dhifkyvw7pj1x" path="res://assets/characters/Sonic/SonicMDL_Sonic_SpinTex.png" id="1_k8w7q"]
+[ext_resource type="Texture2D" uid="uid://dhifkyvw7pj1x" path="res://assets/characters/Sonic/Sonic_SpinTex.png" id="1_k8w7q"]
 
 [resource]
 resource_name = "Sonic_SpinTex"

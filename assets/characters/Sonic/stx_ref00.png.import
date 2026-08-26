@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhj5novu268tg"
-path.s3tc="res://.godot/imported/SonicMDL_stx_00.png-a15e3004ebe86c091ffb2e4fd9e2204d.s3tc.ctex"
+uid="uid://c3tttyqkbxo38"
+path.s3tc="res://.godot/imported/stx_ref00.png-aa641c66346c40a232aff96c4d8194ea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "24f873921e9a92c6919b98ff524ffec6"
+"md5": "d290ebae5e8bcc95ed35fe6ff96ce7fa"
 }
 
 [deps]
 
-source_file="res://assets/characters/Sonic/SonicMDL_stx_00.png"
-dest_files=["res://.godot/imported/SonicMDL_stx_00.png-a15e3004ebe86c091ffb2e4fd9e2204d.s3tc.ctex"]
+source_file="res://assets/characters/Sonic/stx_ref00.png"
+dest_files=["res://.godot/imported/stx_ref00.png-aa641c66346c40a232aff96c4d8194ea.s3tc.ctex"]
 
 [params]
 

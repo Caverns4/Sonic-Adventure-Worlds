@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://djvfk7m0yis5l"]
 
-[ext_resource type="Texture2D" uid="uid://dogq6d621mc2v" path="res://assets/characters/Sonic/SonicMDL_frgtex.png" id="1_sgf15"]
+[ext_resource type="Texture2D" uid="uid://dogq6d621mc2v" path="res://assets/characters/Sonic/frgtex.png" id="1_sgf15"]
 
 [resource]
 resource_name = "frgtex"

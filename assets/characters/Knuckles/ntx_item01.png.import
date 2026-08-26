@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtc1t011w63qy"
-path.s3tc="res://.godot/imported/SonicMDL_SSonic_EyeTex.png-c470672c0b2656503c5d28c0d55be1da.s3tc.ctex"
+uid="uid://dww8ex4nhfeef"
+path.s3tc="res://.godot/imported/ntx_item01.png-fb962145f622dc981bd23f262d523aec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "67a06ac8f70ad3714ce9c13132e6571d"
+"md5": "c75cde1ea650e9030ec4a192ceb4074d"
 }
 
 [deps]
 
-source_file="res://assets/characters/Sonic/SonicMDL_SSonic_EyeTex.png"
-dest_files=["res://.godot/imported/SonicMDL_SSonic_EyeTex.png-c470672c0b2656503c5d28c0d55be1da.s3tc.ctex"]
+source_file="res://assets/characters/Knuckles/ntx_item01.png"
+dest_files=["res://.godot/imported/ntx_item01.png-fb962145f622dc981bd23f262d523aec.s3tc.ctex"]
 
 [params]
 
@@ -27,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

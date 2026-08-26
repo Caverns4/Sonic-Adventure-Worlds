@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bx3uj78lq7o27"]
 
-[ext_resource type="Texture2D" uid="uid://dfi32sx3anpbh" path="res://assets/characters/Sonic/SonicMDL_mgvtex.png" id="1_in5yg"]
+[ext_resource type="Texture2D" uid="uid://dfi32sx3anpbh" path="res://assets/characters/Sonic/mgvtex.png" id="1_in5yg"]
 
 [resource]
 resource_name = "mgvtex"

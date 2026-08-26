@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dogq6d621mc2v"
-path.s3tc="res://.godot/imported/SonicMDL_frgtex.png-bc2a8b898caeb79a0218d0f271e6665f.s3tc.ctex"
+uid="uid://m7pwkvdtjblm"
+path.s3tc="res://.godot/imported/ntx_itemx0.png-7a7bbf3e505d444be97ddb2d776933e2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8c150b33e0fc9f7e1624f47f1fd6fa30"
+"md5": "bd0f4c2f7b5c6fb7e5de0b2c9f129c5b"
 }
 
 [deps]
 
-source_file="res://assets/characters/Sonic/SonicMDL_frgtex.png"
-dest_files=["res://.godot/imported/SonicMDL_frgtex.png-bc2a8b898caeb79a0218d0f271e6665f.s3tc.ctex"]
+source_file="res://assets/characters/Knuckles/ntx_itemx0.png"
+dest_files=["res://.godot/imported/ntx_itemx0.png-7a7bbf3e505d444be97ddb2d776933e2.s3tc.ctex"]
 
 [params]
 

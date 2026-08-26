@@ -56,7 +56,7 @@ orientation = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_bsto3"]
 material = SubResource("StandardMaterial3D_2kmdv")
-size = Vector2(500, 500)
+size = Vector2(1000, 1000)
 orientation = 1
 
 [node name="GreenHill" type="Node3D" unique_id=240470333]
@@ -99,30 +99,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -32)
 
 [node name="Dashpanel" parent="ObjectsContainer" unique_id=620340897 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -113.95014, -26.171055, -443.8093)
+speed = 12
 
 [node name="Dashpanel2" parent="ObjectsContainer" unique_id=1927178634 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.95014, -26.171055, -443.8093)
+speed = 12
 
 [node name="Dashpanel3" parent="ObjectsContainer" unique_id=2006471686 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -107.95014, -26.171055, -443.8093)
+speed = 12
 
 [node name="Dashpanel7" parent="ObjectsContainer" unique_id=1207645295 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 2.9835658, 0.3135854, 0, -0.3135854, 2.9835658, -124.95014, -25.287468, -458.8093)
+speed = 8
 
 [node name="Dashpanel8" parent="ObjectsContainer" unique_id=2009311413 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 2.9835658, 0.3135854, 0, -0.3135854, 2.9835658, -121.95014, -25.287468, -458.8093)
+speed = 8
 
 [node name="Dashpanel9" parent="ObjectsContainer" unique_id=2054597275 instance=ExtResource("9_bsto3")]
 transform = Transform3D(3, 0, 0, 0, 2.9835658, 0.3135854, 0, -0.3135854, 2.9835658, -118.95014, -25.287468, -458.8093)
+speed = 8
 
 [node name="Dashpanel4" parent="ObjectsContainer" unique_id=127292134 instance=ExtResource("9_bsto3")]
 transform = Transform3D(2.9544232, 1.9922304e-09, 0.52094465, 0.52094465, -2.2771214e-08, -2.9544232, 1.9922304e-09, 3, -2.2771214e-08, -110.45087, -14.171055, -467.8093)
+speed = 12
 
 [node name="Dashpanel5" parent="ObjectsContainer" unique_id=546936579 instance=ExtResource("9_bsto3")]
 transform = Transform3D(2.988584, 4.990035e-10, 0.2614674, 0.2614674, -1.1429103e-08, -2.988584, 4.990035e-10, 3, -1.1429103e-08, -113.59475, -14.171055, -467.8093)
+speed = 12
 
 [node name="Dashpanel6" parent="ObjectsContainer" unique_id=2022296717 instance=ExtResource("9_bsto3")]
 transform = Transform3D(2.988584, 4.990035e-10, 0.2614674, 0.2614674, -1.1429103e-08, -2.988584, 4.990035e-10, 3, -1.1429103e-08, -116.43508, -14.171055, -467.8093)
+speed = 12
 
 [node name="GHZTree" parent="ObjectsContainer" unique_id=644607386 instance=ExtResource("9_2kmdv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, -15)
