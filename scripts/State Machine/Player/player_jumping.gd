@@ -1,6 +1,7 @@
 extends State
 
-
+func enter_state(_params: Variant) -> void:
+	player.direction_lock_time = 0.0
 
 func _process_state(delta: float) -> void:
 	var direction: Vector3 = player.get_direction_from_Input()

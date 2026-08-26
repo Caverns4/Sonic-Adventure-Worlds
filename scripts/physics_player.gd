@@ -4,7 +4,6 @@ extends Character
 @export var character: CharacterData.ID = 0 as CharacterData.ID
 @export_category("Objects")
 @export var player_skin: CharacterAvatar
-@export var hud: GameHUD
 
 @export_group("Ground movement")
 @export var top_speed: float = 6.0
@@ -35,12 +34,12 @@ var angle: float = 0.0
 var stick: bool = true
 var frozen: bool = false
 var cooldown_time: float = 0.0
-var allow_jump_ability: bool = true
+var direction_lock_time: float = 0.0
+
 var in_air: bool = true:
 	set(value):
 		in_air = value
 		if !in_air:
-			$LandSFX.play()
 			jumping = false
 			if player_skin and player_skin.anim_override:
 				player_skin.anim_override = false
@@ -57,6 +56,7 @@ var is_super: bool = false
 @onready var brake_sfx: AudioStreamPlayer3D = $BrakeSFX
 @onready var land_sfx: AudioStreamPlayer3D = $LandSFX
 @onready var dynamic_sfx: AudioStreamPlayer3D = $DynamicSFX
+@onready var hud: GameHUD
 
 var ring_count: int = 0 :
 	set(value):
@@ -76,7 +76,6 @@ func _ready():
 
 	for i in casters:
 		i.position -= i.position.normalized()*margin
-	hud._setup_life_counter(character)
 	super()
 
 
@@ -87,6 +86,10 @@ func is_running() -> bool:
 	return velocity.length() > 15.0
 
 func _physics_process(delta):
+	if frozen: return
+	direction_lock_time = move_toward(direction_lock_time,0.0,delta)
+	cooldown_time = move_toward(cooldown_time,0.0,delta)
+	
 	super(delta)
 	if in_air == is_on_floor(): in_air = !in_air
 	if Input.is_action_just_pressed("test_left"):
@@ -107,15 +110,17 @@ func get_direction_from_Input() -> Vector3:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir: Vector2 = Vector2.ZERO
-	input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
-	if abs(input_dir.x) < 0.125:
-		input_dir.x = 0
-	if abs(input_dir.y) < 0.125:
-		input_dir.y = 0
+	var direction: Vector3 = velocity.normalized()
+	if direction_lock_time <= 0:
+		input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+		if abs(input_dir.x) < 0.125:
+			input_dir.x = 0
+		if abs(input_dir.y) < 0.125:
+			input_dir.y = 0
 	
-	# calculate the forward direction based on input and direction from the floor and the camera
-	var calcForward = camera.global_position.direction_to(global_position).slide(up_direction)
-	var direction = ((calcForward.rotated(up_direction,deg_to_rad(90))*-input_dir.x)+(calcForward*-input_dir.y)).normalized()
+		# calculate the forward direction based on input and direction from the floor and the camera
+		var calcForward = camera.global_position.direction_to(global_position).slide(up_direction)
+		direction = ((calcForward.rotated(up_direction,deg_to_rad(90))*-input_dir.x)+(calcForward*-input_dir.y)).normalized()
 	return direction
 
 func apply_gravity(delta: float ) -> void:

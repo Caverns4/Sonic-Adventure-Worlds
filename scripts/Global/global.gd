@@ -10,7 +10,7 @@ const player_scenes: Array[PackedScene] = [
 ]
 
 var hud: GameHUD = null 
-var players: Array[CharacterBody3D] = []
+var players: Array[Physics_Player] = []
 var character_selections: Array[CharacterData.ID] = []
 
 var music_player: AudioStreamPlayer = AudioStreamPlayer.new()

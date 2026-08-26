@@ -18,5 +18,5 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 3)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
 parent = NodePath("../..")
 
-[node name="BrakeSFX" parent="." index="7" unique_id=1900982292]
+[node name="BrakeSFX" parent="." index="6" unique_id=1900982292]
 stream = ExtResource("3_hqjkf")

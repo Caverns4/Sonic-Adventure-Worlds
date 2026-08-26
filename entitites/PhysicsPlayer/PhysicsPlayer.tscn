@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dy0gj88wcbu1d" path="res://scripts/camera_rig.gd" id="2_5pf7s"]
 [ext_resource type="AudioStream" uid="uid://bul2hyno860tl" path="res://audio/player/s2br_Land.wav" id="3_7tjgl"]
 [ext_resource type="AudioStream" uid="uid://detjvx3r2grq0" path="res://audio/player/s2br_Jump.wav" id="3_rlyl0"]
-[ext_resource type="PackedScene" uid="uid://ffdyw86vrsm6" path="res://entitites/HUD/player_hud.tscn" id="4_7tjgl"]
 [ext_resource type="Script" uid="uid://daa2wfqeomcq0" path="res://scripts/State Machine/Player/player_free.gd" id="5_4i2fk"]
 [ext_resource type="Script" uid="uid://jko3bbm38hg7" path="res://scripts/State Machine/Player/player_air.gd" id="6_w3uin"]
 [ext_resource type="Script" uid="uid://bgkvydjw5fb2n" path="res://scripts/State Machine/Player/player_rolling.gd" id="7_jdvc7"]
@@ -17,7 +16,17 @@ collision_layer = 4096
 collision_mask = 4099
 floor_snap_length = 0.25
 script = ExtResource("1_rlyl0")
-hud = NodePath("HUD")
+character = null
+hud = NodePath("")
+top_speed = null
+base_aceleration = null
+jump_vel = null
+jump_hold_vel = null
+a_button_air_ability = null
+x_button_ground_ability = null
+x_button_air_ability = null
+y_button_ground_ability = null
+y_button_air_ability = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=622665701]
 shape = SubResource("SphereShape3D_1j11v")
@@ -94,5 +103,3 @@ state_name = &"Rolling"
 [node name="Jumping" type="Node" parent="StateContainer" unique_id=685194192]
 script = ExtResource("8_em02n")
 state_name = &"Jumping"
-
-[node name="HUD" parent="." unique_id=791427141 instance=ExtResource("4_7tjgl")]
