@@ -1,7 +1,7 @@
 extends State
 
 
-@export var max_charge: float = 0.3
+@export var max_charge: float = 0.25
 @export var dash_speed: float = 10.0
 @export var dropdash_charge_sfx: AudioStream = preload("res://audio/player/DropDash.wav")
 @export var dropdash_sfx: AudioStream = preload("res://audio/player/s2br_DashRelease.wav")
@@ -42,7 +42,7 @@ func _process_state(delta: float) -> void:
 func exit_state() -> void:
 	var ball: MeshInstance3D = player.player_skin.jump_ball
 	if ball: ball.hide()
-	if charge_time >= max_charge:
+	if charge_time >= max_charge and player.is_on_floor():
 		var direction: float = player.pivot.global_rotation.y
 		player.velocity = Vector3.FORWARD.rotated(player.up_direction,direction) * dash_speed * 3
 

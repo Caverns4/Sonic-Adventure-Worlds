@@ -26,7 +26,8 @@ func _process_state(delta: float) -> void:
 		player.check_jump()
 	player.check_on_floor(delta,direction)
 	if !player.is_on_floor():
-		player.change_state("Air",false)
+		player.change_state("Air",player.jumping)
+		player.direction_lock_time = 0.25
 	elif player.velocity.length() < 1.0:
 		player.change_state("Free",false)
 	else:
