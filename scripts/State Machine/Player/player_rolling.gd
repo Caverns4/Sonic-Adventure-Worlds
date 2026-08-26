@@ -3,13 +3,22 @@ extends State
 @export var rolling_sfx: AudioStream = preload("res://audio/player/s2br_Roll.wav")
 @export var roll_decelaration_rate: float = 4.0
 
+var button_check: String = ""
+
 func can_enter_state() -> bool:
-	if player.velocity.length() > 1.0: return true
+	if player.is_on_floor(): return true
 	return false
 
-func enter_state(_params: Variant) -> void:
-	if _params == false: ## player is not attacking
-		player.change_state("Free",false)
+func enter_state(button_name: Variant) -> void:
+	button_check = button_name
+	if !player.is_on_floor():
+		player.change_state("Air",false)
+	
+	if player.velocity.length() < 1.0: ## player is not attacking
+		if player.can_enter_state("Spindash"):
+			player.change_state("Spindash",button_check)
+		else:
+			player.change_state("Free",false)
 	else:
 		player.dynamic_sfx.stream = rolling_sfx
 		player.dynamic_sfx.play()
@@ -29,6 +38,8 @@ func _process_state(delta: float) -> void:
 		player.change_state("Air",player.jumping)
 		player.direction_lock_time = 0.25
 	elif player.velocity.length() < 1.0:
+		player.change_state("Free",false)
+	elif Input.is_action_just_pressed(button_check):
 		player.change_state("Free",false)
 	else:
 		player.player_skin.apply_animation("Jump")

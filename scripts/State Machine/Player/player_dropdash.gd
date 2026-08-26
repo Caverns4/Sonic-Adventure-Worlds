@@ -7,9 +7,10 @@ extends State
 @export var dropdash_sfx: AudioStream = preload("res://audio/player/s2br_DashRelease.wav")
 
 var charge_time: float = 0.0
+var button_check: String = ""
 
-
-func enter_state(_params: Variant) -> void:
+func enter_state(button_name: Variant) -> void:
+	button_check = button_name
 	player.direction_lock_time = 0.0
 	charge_time = 0
 
@@ -21,13 +22,13 @@ func _process_state(delta: float) -> void:
 
 	if player.is_on_floor():
 		if charge_time >= max_charge:
-			player.change_state("Rolling",true)
+			player.change_state("Rolling",button_check)
 			player.dynamic_sfx.stream = dropdash_sfx
 			player.dynamic_sfx.play()
 		else:
 			player.change_state("Free",false)
 			player.land_sfx.play()
-	elif !Input.is_action_pressed("special"):
+	elif !Input.is_action_pressed(button_check):
 		player.change_state("Jumping",true)
 	else:
 		player.player_skin.apply_animation("Jump")

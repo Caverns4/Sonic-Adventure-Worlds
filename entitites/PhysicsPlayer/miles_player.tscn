@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_cvsgt"]
 [ext_resource type="PackedScene" uid="uid://b8s8iyxy7o84j" path="res://assets/characters/Miles/miles.tscn" id="2_1yikb"]
 [ext_resource type="AudioStream" uid="uid://21koellb870p" path="res://audio/player/s2br_MetalBrake.wav" id="3_1yikb"]
+[ext_resource type="Script" uid="uid://b04inhdqx01gl" path="res://scripts/State Machine/Player/player_spindash.gd" id="4_1i1r8"]
 
 [node name="Miles Player" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_cvsgt")]
 character = 2
@@ -14,3 +15,7 @@ parent = NodePath("../..")
 
 [node name="BrakeSFX" parent="." index="6" unique_id=1900982292]
 stream = ExtResource("3_1yikb")
+
+[node name="Spindash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="4" unique_id=1881223295]
+script = ExtResource("4_1i1r8")
+state_name = &"Spindash"

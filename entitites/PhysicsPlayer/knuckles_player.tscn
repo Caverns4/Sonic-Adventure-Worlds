@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_rkewr"]
 [ext_resource type="PackedScene" uid="uid://bsnp80ga5lqeu" path="res://assets/characters/Knuckles/knuckles.tscn" id="2_cootw"]
 [ext_resource type="AudioStream" uid="uid://21koellb870p" path="res://audio/player/s2br_MetalBrake.wav" id="3_cootw"]
+[ext_resource type="Script" uid="uid://b04inhdqx01gl" path="res://scripts/State Machine/Player/player_spindash.gd" id="4_hn5jk"]
 
 [node name="KnucklesPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_rkewr")]
 character = 3
@@ -13,5 +14,9 @@ jump_vel = 6.0
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
 parent = NodePath("../..")
 
-[node name="BrakeSFX" parent="." index="7" unique_id=1900982292]
+[node name="BrakeSFX" parent="." index="6" unique_id=1900982292]
 stream = ExtResource("3_cootw")
+
+[node name="Spindash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="4" unique_id=586562268]
+script = ExtResource("4_hn5jk")
+state_name = &"Spindash"

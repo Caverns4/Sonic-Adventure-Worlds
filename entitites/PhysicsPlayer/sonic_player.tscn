@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_jvnap"]
 [ext_resource type="PackedScene" uid="uid://bvu3v120mcsq4" path="res://assets/characters/Sonic/sonic.tscn" id="2_hqjkf"]
 [ext_resource type="AudioStream" uid="uid://21koellb870p" path="res://audio/player/s2br_MetalBrake.wav" id="3_hqjkf"]
-[ext_resource type="Script" uid="uid://c4nkbpyvgevgk" path="res://entitites/PhysicsPlayer/player_dropdash.gd" id="4_sonlc"]
+[ext_resource type="Script" uid="uid://c4nkbpyvgevgk" path="res://scripts/State Machine/Player/player_dropdash.gd" id="4_sonlc"]
+[ext_resource type="Script" uid="uid://b04inhdqx01gl" path="res://scripts/State Machine/Player/player_spindash.gd" id="5_f5a14"]
 
 [node name="Sonic Player" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_jvnap")]
 character = 1
@@ -14,6 +15,7 @@ jump_vel = 6.5
 jump_hold_vel = 20.0
 a_button_air_ability = "HomingAttack"
 x_button_ground_ability = "Spindash"
+x_button_air_ability = ""
 y_button_ground_ability = "Rolling"
 y_button_air_ability = "Dropdash"
 
@@ -30,3 +32,7 @@ stream = ExtResource("3_hqjkf")
 [node name="Dropdash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="4" unique_id=1314764685]
 script = ExtResource("4_sonlc")
 state_name = &"Dropdash"
+
+[node name="Spindash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="5" unique_id=1437389175]
+script = ExtResource("5_f5a14")
+state_name = &"Spindash"
