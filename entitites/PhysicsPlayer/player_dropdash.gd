@@ -1,19 +1,51 @@
 extends State
 
+
+@export var max_charge: float = 0.3
+@export var dash_speed: float = 10.0
+@export var dropdash_charge_sfx: AudioStream = preload("res://audio/player/DropDash.wav")
+@export var dropdash_sfx: AudioStream = preload("res://audio/player/s2br_DashRelease.wav")
+
+var charge_time: float = 0.0
+
+
 func enter_state(_params: Variant) -> void:
 	player.direction_lock_time = 0.0
+	charge_time = 0
 
 func _process_state(delta: float) -> void:
 	var direction: Vector3 = player.get_direction_from_Input()
 	player.apply_gravity(delta)
 	player.velocity = move_in_air(delta,direction)
 	player.check_on_floor(delta,direction)
+
 	if player.is_on_floor():
-		player.change_state("Free",false)
-		player.land_sfx.play()
+		if charge_time >= max_charge:
+			player.change_state("Rolling",true)
+			player.dynamic_sfx.stream = dropdash_sfx
+			player.dynamic_sfx.play()
+		else:
+			player.change_state("Free",false)
+			player.land_sfx.play()
+	elif !Input.is_action_pressed("special"):
+		player.change_state("Jumping",true)
 	else:
-		player.player_skin.animate_in_air(player.velocity)
-		player.check_air_abilities()
+		player.player_skin.apply_animation("Jump")
+		if charge_time < max_charge:
+			charge_time += delta
+			if charge_time >= max_charge:
+				player.dynamic_sfx.stream = dropdash_charge_sfx
+				player.dynamic_sfx.play()
+				var ball: MeshInstance3D = player.player_skin.jump_ball
+				if ball: ball.show()
+
+func exit_state() -> void:
+	var ball: MeshInstance3D = player.player_skin.jump_ball
+	if ball: ball.hide()
+	if charge_time >= max_charge:
+		var direction: float = player.pivot.global_rotation.y
+		player.velocity = Vector3.FORWARD.rotated(player.up_direction,direction) * dash_speed * 3
+
 
 func move_in_air(delta: float, direction: Vector3) -> Vector3:
 	# keep a copy of the previous velocity

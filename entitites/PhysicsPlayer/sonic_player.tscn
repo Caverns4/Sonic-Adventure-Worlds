@@ -3,13 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_jvnap"]
 [ext_resource type="PackedScene" uid="uid://bvu3v120mcsq4" path="res://assets/characters/Sonic/sonic.tscn" id="2_hqjkf"]
 [ext_resource type="AudioStream" uid="uid://21koellb870p" path="res://audio/player/s2br_MetalBrake.wav" id="3_hqjkf"]
+[ext_resource type="Script" uid="uid://c4nkbpyvgevgk" path="res://entitites/PhysicsPlayer/player_dropdash.gd" id="4_sonlc"]
 
 [node name="Sonic Player" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_jvnap")]
 character = 1
 player_skin = NodePath("Pivot/SonicMDL2")
+top_speed = 6.0
+base_aceleration = 16.0
+jump_vel = 6.5
+jump_hold_vel = 20.0
 a_button_air_ability = "HomingAttack"
 x_button_ground_ability = "Spindash"
-x_button_air_ability = "Dropdash"
+y_button_ground_ability = "Rolling"
+y_button_air_ability = "Dropdash"
 
 [node name="Camera3D" parent="CameraRig/SpringArm3D" parent_id_path=PackedInt32Array(1225321752) index="0" unique_id=521910118]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 3)
@@ -20,3 +26,7 @@ parent = NodePath("../..")
 
 [node name="BrakeSFX" parent="." index="6" unique_id=1900982292]
 stream = ExtResource("3_hqjkf")
+
+[node name="Dropdash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="4" unique_id=1314764685]
+script = ExtResource("4_sonlc")
+state_name = &"Dropdash"

@@ -7,7 +7,7 @@ const LERP_VELOCITY: float = 0.15
 ## Setup automatically by the parent
 @export var parent: Physics_Player = null
 @export var animation_player: AnimationPlayer = null
-@export var jump_ball: NodePath = ''
+@export var jump_ball: MeshInstance3D
 @export var super_state_handler: Node
 @export var attachments: Array[AnimatedAttachment] = []
 

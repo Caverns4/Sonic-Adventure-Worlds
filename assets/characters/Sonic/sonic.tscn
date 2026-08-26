@@ -4,8 +4,13 @@
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_d7le5"]
 [ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_bv7t8"]
 [ext_resource type="Script" uid="uid://di8k5ljlri1fy" path="res://scripts/super_status.gd" id="3_jktiu"]
+[ext_resource type="Material" uid="uid://8c4m6fyvhsv4" path="res://assets/characters/Sonic/Sonic_SpinTex.tres" id="3_kvhlp"]
 [ext_resource type="Script" uid="uid://5ku70hdv1ykc" path="res://scripts/upgrade_model_handler.gd" id="4_ip7d3"]
 [ext_resource type="Script" uid="uid://jq473kulleiy" path="res://scripts/voice_manager.gd" id="5_bim1a"]
+[ext_resource type="Material" uid="uid://bp25i7repfmm6" path="res://assets/characters/Sonic/stx_00.tres" id="5_kn6l4"]
+[ext_resource type="Material" uid="uid://dianj10yojqo7" path="res://assets/characters/Sonic/sonic_soapshoes.tres" id="6_d57g0"]
+[ext_resource type="Material" uid="uid://bcsmrowegg8n2" path="res://assets/characters/Sonic/stx_01.tres" id="7_tm868"]
+[ext_resource type="Material" uid="uid://be74p87haiew0" path="res://assets/characters/Sonic/stx_eye.tres" id="8_d57g0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_as1qj"]
 render_priority = 0
@@ -25,34 +30,39 @@ properties/1/path = NodePath("AnimationPlayer:current_animation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[node name="SonicMDL2" unique_id=1352944031 node_paths=PackedStringArray("animation_player", "super_state_handler") instance=ExtResource("1_fy0e3")]
+[node name="SonicMDL2" unique_id=1352944031 node_paths=PackedStringArray("animation_player", "jump_ball", "super_state_handler") instance=ExtResource("1_fy0e3")]
 script = ExtResource("2_d7le5")
 animation_player = NodePath("AnimationPlayer")
 jump_ball = NodePath("SonicRig/Skeleton3D/JumpBall")
 super_state_handler = NodePath("SuperStatus")
 
-[node name="JumpBall" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="0" unique_id=605651790]
+[node name="JumpBall" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="0" unique_id=1169463689]
 visible = false
+surface_material_override/0 = ExtResource("3_kvhlp")
 
-[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="1" unique_id=1783746094]
+[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="1" unique_id=49963730]
 surface_material_override/1 = SubResource("ShaderMaterial_as1qj")
 
-[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="2" unique_id=1162374502]
+[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="2" unique_id=2064698058]
 visible = false
 
-[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="3" unique_id=1890475457]
+[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="3" unique_id=1900565890]
 visible = false
 
-[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="4" unique_id=718901485]
+[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="4" unique_id=966531764]
 visible = false
 
-[node name="SonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="5" unique_id=364439925]
+[node name="SonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="5" unique_id=683955500]
+surface_material_override/0 = ExtResource("5_kn6l4")
+surface_material_override/1 = ExtResource("6_d57g0")
+surface_material_override/2 = ExtResource("7_tm868")
 surface_material_override/3 = SubResource("ShaderMaterial_bv7t8")
+surface_material_override/4 = ExtResource("8_d57g0")
 
-[node name="SSonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="6" unique_id=2025436917]
+[node name="SSonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="6" unique_id=1795961002]
 visible = false
 
-[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1717967856) index="7" unique_id=1881779348]
+[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="7" unique_id=1881779348]
 setting_count = 1
 settings/0/root_bone_name = "Physics"
 settings/0/root_bone = 10
@@ -80,7 +90,7 @@ settings/0/joints/1/bone = 11
 settings/0/enable_all_child_collisions = false
 settings/0/collision_count = 0
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=952855454]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1767296491]
 playback_default_blend_time = 0.2
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." index="2" unique_id=158256618]

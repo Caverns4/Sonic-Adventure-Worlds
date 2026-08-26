@@ -150,6 +150,13 @@ func check_ground_abilities() -> void:
 	elif Input.is_action_just_pressed("special") and can_enter_state(y_button_ground_ability):
 		change_state(y_button_ground_ability,true)
 
+func check_air_abilities() -> void:
+	if Input.is_action_just_pressed("jump")and can_enter_state(a_button_air_ability):
+		change_state(a_button_air_ability,true)
+	elif Input.is_action_just_pressed("attack") and can_enter_state(x_button_air_ability):
+		change_state(x_button_air_ability,true)
+	elif Input.is_action_just_pressed("special") and can_enter_state(y_button_air_ability):
+		change_state(y_button_air_ability,true)
 
 
 func check_on_floor(delta,direction: Vector3) -> void:
