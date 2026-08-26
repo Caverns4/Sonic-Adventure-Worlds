@@ -6,4 +6,5 @@
 resource_name = "stx_ref01"
 cull_mode = 2
 albedo_texture = ExtResource("1_y1vis")
-roughness = 0.9
+refraction_enabled = true
+refraction_texture = ExtResource("1_y1vis")

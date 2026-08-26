@@ -14,7 +14,7 @@ Button/colors/font_focus_color = Color(1, 0, 0, 1)
 Button/colors/font_hover_color = Color(1, 1, 0, 1)
 Button/colors/font_hover_pressed_color = Color(1, 0, 0, 1)
 Button/colors/font_pressed_color = Color(1, 0, 0, 1)
-Button/font_sizes/font_size = 8
+Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_eiq8w")
 Button/styles/focus = SubResource("StyleBoxFlat_1pci2")
 Button/styles/hover = SubResource("StyleBoxFlat_1pci2")
@@ -23,9 +23,11 @@ Button/styles/normal = SubResource("StyleBoxFlat_1pci2")
 Button/styles/pressed = SubResource("StyleBoxFlat_1pci2")
 
 [node name="LevelSelectOptionButton" type="Button" unique_id=347936004]
+custom_minimum_size = Vector2(320, 0)
 offset_right = 8.0
 offset_bottom = 8.0
 theme = SubResource("Theme_o2mxn")
+theme_override_font_sizes/font_size = 16
 text = "Character: VIOLET"
 script = ExtResource("2_1pci2")
 

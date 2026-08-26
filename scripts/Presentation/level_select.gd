@@ -9,10 +9,8 @@ var level_button: PackedScene = preload("res://scenes/ui/level_select/level_sele
 @onready var entrance_button: Button = %EntranceID
 @onready var player_1_button: Button = %Player1Button
 @onready var player_2_button: Button = %Player2Button
-@onready var player_3_button: Button = %Player3Button
-@onready var player_4_button: Button = %Player4Button
 @onready var option_buttons: Array[Button] = [entrance_button,
-player_1_button,player_2_button,player_3_button,player_4_button]
+player_1_button,player_2_button]
 
 var display_modes: Array[String] = ["Hardware","Emulator"]
 var display_mode_index: int = 0
@@ -29,7 +27,9 @@ func _ready() -> void:
 		next_level.scene_to_load = i
 		next_level.start_level.connect(load_scene)
 		next_level.play_menu_sound.connect(play_menu_sound)
-		next_level.text = str(index).pad_zeros(3) + ": " + String(next_level.scene_to_load).trim_prefix("res://scenes/level/").trim_suffix(".tscn")
+		var butt_text: String = str(index).pad_zeros(3) + ": " + String(next_level.scene_to_load).trim_prefix("res://scenes/level/").trim_suffix(".tscn")
+		butt_text = (butt_text.replace("_"," ")).to_upper()
+		next_level.text = butt_text
 		level_container.add_child(next_level)
 		index += 1
 	index = 0

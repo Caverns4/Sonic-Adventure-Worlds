@@ -55,7 +55,9 @@ custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 0
 text = "
-MAP SELECT"
+MAP SELECT
+
+"
 label_settings = SubResource("LabelSettings_rif6e")
 horizontal_alignment = 1
 
@@ -78,6 +80,8 @@ draw_focus_border = true
 [node name="MenuContainer" type="VBoxContainer" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer" unique_id=117124762]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
 alignment = 1
 
 [node name="LevelSelectButton" parent="VBoxContainer/MenuHBoxContainer/ScrollContainer/MenuContainer" unique_id=347936004 instance=ExtResource("3_2epne")]
@@ -133,17 +137,9 @@ layout_mode = 2
 text = "Player2: "
 base_text = "Player2: "
 
-[node name="Player3Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1293300181 instance=ExtResource("3_2epne")]
-unique_name_in_owner = true
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=314112528]
 layout_mode = 2
-text = "Player3: "
-base_text = "Player3: "
-
-[node name="Player4Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1975106088 instance=ExtResource("3_2epne")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Player4: "
-base_text = "Player4: "
+theme_override_constants/separation = 24
 
 [node name="LoadScreen" type="PanelContainer" parent="." unique_id=1574395978]
 visible = false

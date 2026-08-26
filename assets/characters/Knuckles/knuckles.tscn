@@ -3,10 +3,24 @@
 [ext_resource type="PackedScene" uid="uid://df2iwk8mlytnc" path="res://assets/characters/Knuckles/KnuckMDL.glb" id="1_5edre"]
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_v2qnh"]
 [ext_resource type="Script" uid="uid://5ku70hdv1ykc" path="res://scripts/upgrade_model_handler.gd" id="3_v2qnh"]
+[ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_ynpvs"]
+[ext_resource type="Texture2D" uid="uid://b4acpayroweac" path="res://assets/characters/Knuckles/KnuckMDL_ntx_ref00.png" id="4_buhyx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mi4g"]
+render_priority = 0
+shader = ExtResource("3_ynpvs")
+shader_parameter/albedo_tex = ExtResource("4_buhyx")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
 
 [node name="KnuckMDL" unique_id=1896508226 node_paths=PackedStringArray("animation_player") instance=ExtResource("1_5edre")]
 script = ExtResource("2_v2qnh")
 animation_player = NodePath("AnimationPlayer")
+
+[node name="Upg_ShovelClawMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1952638190) index="2" unique_id=1214774345]
+surface_material_override/0 = SubResource("ShaderMaterial_7mi4g")
+
+[node name="Upg_SunglassesMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1952638190) index="3" unique_id=188608705]
+surface_material_override/1 = SubResource("ShaderMaterial_7mi4g")
 
 [node name="UpgardeModels" type="Node" parent="." index="2" unique_id=2097040989]
 script = ExtResource("3_v2qnh")

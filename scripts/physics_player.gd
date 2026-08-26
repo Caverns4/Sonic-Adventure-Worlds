@@ -214,7 +214,7 @@ func calculate_normal(a = Vector3.ZERO, b = Vector3.ZERO, c = Vector3.ZERO):
 	return u.cross(v)
 
 func _snap_camera_behind_player():
-	camera.rotation.y = pivot.rotation.y
+	camera_rig.rotation.y = pivot.rotation.y
 
 func _check_fall_and_respawn():
 	if global_transform.origin.y < -300.0:

@@ -14,7 +14,9 @@ func _process(delta: float) -> void:
 	mat.uv1_offset += Vector3(0,delta/60*speed,0)
 
 func _on_body_entered(body: CharacterBody3D) -> void:
-	body.velocity = -global_basis.z*speed
-	body.global_position = Vector3(global_position.x,body.global_position.y,global_position.z)
-	body._snap_camera_behind_player()
-	$AudioStreamPlayer3D.play()
+	if body is Physics_Player:
+		var player: Physics_Player = body
+		player.velocity = -global_basis.z*speed
+		player.global_position = Vector3(global_position.x,player.global_position.y,global_position.z)
+		player._snap_camera_behind_player()
+		$AudioStreamPlayer3D.play()
