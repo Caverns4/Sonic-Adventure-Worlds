@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0dgljwwl463n" path="res://scripts/level.gd" id="1_afk4w"]
 [ext_resource type="PackedScene" uid="uid://2tp0s831sdde" path="res://assets/levels/GHZ/GreenHillTest.glb" id="2_afk4w"]
 [ext_resource type="AudioStream" uid="uid://b2l3dsy31xtjf" path="res://audio/music/g_hill.ogg" id="2_dtv4y"]
+[ext_resource type="Script" uid="uid://b5pdhyoq3i50q" path="res://scripts/death_plane.gd" id="6_dtv4y"]
 [ext_resource type="PackedScene" uid="uid://bylfuoelb7mxn" path="res://assets/levels/GHZ/Objects/GHZTree.glb" id="9_2kmdv"]
 [ext_resource type="PackedScene" uid="uid://35rubp4wfliu" path="res://entitites/generic_objects/ring.tscn" id="9_4uo7t"]
 [ext_resource type="PackedScene" uid="uid://dywunkm3nx6eo" path="res://entitites/generic_objects/dashpanel.tscn" id="9_bsto3"]
@@ -29,6 +30,12 @@ fog_light_color = Color(0.26666668, 0.4, 0.6666667, 1)
 fog_sky_affect = 0.0
 volumetric_fog_sky_affect = 0.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bsto3"]
+size = Vector3(500, 10, 500)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dtv4y"]
+size = Vector3(500, 10, 245)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kmdv"]
 cull_mode = 2
 albedo_texture = ExtResource("10_4uo7t")
@@ -37,9 +44,19 @@ metallic_specular = 1.0
 uv1_scale = Vector3(0.25, 0.25, 0.25)
 uv1_triplanar = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_p2siw"]
+[sub_resource type="QuadMesh" id="QuadMesh_0gvsd"]
 material = SubResource("StandardMaterial3D_2kmdv")
-size = Vector2(600, 600)
+size = Vector2(500, 500)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_dtv4y"]
+material = SubResource("StandardMaterial3D_2kmdv")
+size = Vector2(500, 250)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_bsto3"]
+material = SubResource("StandardMaterial3D_2kmdv")
+size = Vector2(500, 500)
 orientation = 1
 
 [node name="GreenHill" type="Node3D" unique_id=240470333]
@@ -131,6 +148,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, 1)
 [node name="GHZTree4" parent="ObjectsContainer" unique_id=614297819 instance=ExtResource("9_2kmdv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -5, 7)
 
+[node name="DeathPlane" type="Area3D" parent="ObjectsContainer" unique_id=524491575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -26, 0)
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("6_dtv4y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObjectsContainer/DeathPlane" unique_id=995398930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -15, -7)
+shape = SubResource("BoxShape3D_bsto3")
+debug_color = Color(0.8392157, 0, 0.09803922, 1)
+
+[node name="DeathPlane2" type="Area3D" parent="ObjectsContainer" unique_id=298853725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -180, -766)
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("6_dtv4y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObjectsContainer/DeathPlane2" unique_id=743706033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -15, -7)
+shape = SubResource("BoxShape3D_bsto3")
+debug_color = Color(0.8392157, 0, 0.09803922, 1)
+
+[node name="DeathPlane3" type="Area3D" parent="ObjectsContainer" unique_id=1434770804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -26, -504)
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("6_dtv4y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObjectsContainer/DeathPlane3" unique_id=2059363096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -15, 120.5)
+shape = SubResource("BoxShape3D_dtv4y")
+debug_color = Color(0.8392157, 0, 0.09803922, 1)
+
+[node name="DeathPlane4" type="Area3D" parent="ObjectsContainer" unique_id=91456683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40, -572)
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("6_dtv4y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObjectsContainer/DeathPlane4" unique_id=1010736057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -15, 120.5)
+shape = SubResource("BoxShape3D_dtv4y")
+debug_color = Color(0.8392157, 0, 0.09803922, 1)
+
 [node name="LevelContainer" type="Node3D" parent="." unique_id=1627768696]
 
 [node name="GreenHillTest" parent="LevelContainer" unique_id=890153675 instance=ExtResource("2_afk4w")]
@@ -141,11 +202,15 @@ collision_layer = 9
 collision_mask = 0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="LevelContainer" unique_id=1545449050]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -36, 219)
-mesh = SubResource("QuadMesh_p2siw")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, -36, -8)
+mesh = SubResource("QuadMesh_0gvsd")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="LevelContainer" unique_id=298533898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -36, -381)
-mesh = SubResource("QuadMesh_p2siw")
+mesh = SubResource("QuadMesh_dtv4y")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="LevelContainer" unique_id=1088149758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -190, -790)
+mesh = SubResource("QuadMesh_bsto3")
 
 [editable path="LevelContainer/GreenHillTest"]
