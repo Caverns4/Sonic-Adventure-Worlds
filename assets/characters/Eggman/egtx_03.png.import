@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lp0de8ib8f3n"
-path.s3tc="res://.godot/imported/EggmanMDL_egtx_01.png-f9ab959a45736dc44133d38d97530df6.s3tc.ctex"
+uid="uid://djs8d0nlpthfk"
+path.s3tc="res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ce68c7c79a2d7ba29929a7f7e6babddd"
+"md5": "54408a7291840d981a7674ceb02be15c"
 }
 
 [deps]
 
-source_file="res://assets/characters/Eggman/EggmanMDL_egtx_01.png"
-dest_files=["res://.godot/imported/EggmanMDL_egtx_01.png-f9ab959a45736dc44133d38d97530df6.s3tc.ctex"]
+source_file="res://assets/characters/Eggman/egtx_03.png"
+dest_files=["res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.s3tc.ctex"]
 
 [params]
 

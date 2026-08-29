@@ -7,11 +7,15 @@
 radius = 0.75
 
 [node name="EggmanPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_6ir7c")]
-character = 4
+character = 5
 player_skin = NodePath("Pivot/EggmanMDL")
 top_speed = 5.0
 jump_vel = 4.5
+a_button_air_ability = ""
+x_button_ground_ability = ""
+x_button_air_ability = ""
 y_button_ground_ability = ""
+y_button_air_ability = ""
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=622665701]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0.5, 0)

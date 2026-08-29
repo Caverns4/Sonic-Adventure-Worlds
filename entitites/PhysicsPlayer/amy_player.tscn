@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cydam1fu03tms"]
+
+[ext_resource type="PackedScene" uid="uid://drogg7i7x3c7b" path="res://entitites/PhysicsPlayer/PhysicsPlayer.tscn" id="1_lyvp0"]
+[ext_resource type="PackedScene" uid="uid://dxj5sj636fm3r" path="res://assets/characters/Amy/Amy.tscn" id="2_ued5i"]
+
+[node name="AmyPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_lyvp0")]
+character = 4
+player_skin = NodePath("Pivot/AmyMDL2")
+top_speed = 4.5
+base_aceleration = 12.0
+jump_vel = 6.0
+a_button_air_ability = ""
+x_button_ground_ability = ""
+x_button_air_ability = ""
+y_button_ground_ability = ""
+y_button_air_ability = ""
+
+[node name="AmyMDL2" parent="Pivot" parent_id_path=PackedInt32Array(484166385) index="3" unique_id=1983303689 node_paths=PackedStringArray("parent") instance=ExtResource("2_ued5i")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
+parent = NodePath("../..")

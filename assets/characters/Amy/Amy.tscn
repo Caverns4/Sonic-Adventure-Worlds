@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dxj5sj636fm3r"]
+
+[ext_resource type="PackedScene" uid="uid://cf5lqo1uu8twv" path="res://assets/characters/Amy/AmyMDL.glb" id="1_dvb8k"]
+[ext_resource type="Texture2D" uid="uid://cgajffa0gsn7u" path="res://assets/characters/Amy/atx_00.png" id="2_fhh1u"]
+[ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_hmxqi"]
+[ext_resource type="Texture2D" uid="uid://brfyw3vcnhg5h" path="res://assets/characters/Amy/atx_01.png" id="3_hmxqi"]
+[ext_resource type="Texture2D" uid="uid://cjrc7hufnkas8" path="res://assets/characters/Amy/atx_s000.png" id="4_j3c5l"]
+[ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="5_cgq63"]
+[ext_resource type="Texture2D" uid="uid://vxt15q0jjx3u" path="res://assets/characters/Amy/atx_ref.png" id="6_js1d0"]
+[ext_resource type="Texture2D" uid="uid://cbqva7lpg2bq5" path="res://assets/characters/Amy/atx_ref01.png" id="7_jf2ws"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsjkb"]
+albedo_texture = ExtResource("2_fhh1u")
+texture_filter = 1
+texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2m8u"]
+albedo_texture = ExtResource("3_hmxqi")
+texture_filter = 1
+texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7cgx"]
+albedo_texture = ExtResource("4_j3c5l")
+texture_filter = 1
+texture_repeat = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7rdy"]
+render_priority = 0
+shader = ExtResource("5_cgq63")
+shader_parameter/albedo_tex = ExtResource("6_js1d0")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ahc0"]
+render_priority = 0
+shader = ExtResource("5_cgq63")
+shader_parameter/albedo_tex = ExtResource("7_jf2ws")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+
+[node name="AmyMDL2" unique_id=1983303689 node_paths=PackedStringArray("animation_player") instance=ExtResource("1_dvb8k")]
+script = ExtResource("2_hmxqi")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AmyMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(1819410200) index="0" unique_id=1446322773]
+surface_material_override/0 = SubResource("StandardMaterial3D_bsjkb")
+surface_material_override/1 = SubResource("StandardMaterial3D_k2m8u")
+surface_material_override/2 = SubResource("StandardMaterial3D_f7cgx")
+surface_material_override/3 = SubResource("ShaderMaterial_l7rdy")
+surface_material_override/4 = SubResource("ShaderMaterial_8ahc0")

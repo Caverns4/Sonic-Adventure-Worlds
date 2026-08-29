@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvguholy1mcuf"
-path.s3tc="res://.godot/imported/EggmanMDL_egtx_07.png-064a051fbceb816beff7da5cd8445eac.s3tc.ctex"
+uid="uid://vxt15q0jjx3u"
+path="res://.godot/imported/atx_ref.png-2fce9ffd42b58989338a14c79d5b447a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "297d04e2200e12829c447cf4ef5f8460"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Eggman/EggmanMDL_egtx_07.png"
-dest_files=["res://.godot/imported/EggmanMDL_egtx_07.png-064a051fbceb816beff7da5cd8445eac.s3tc.ctex"]
+source_file="res://assets/characters/Amy/atx_ref.png"
+dest_files=["res://.godot/imported/atx_ref.png-2fce9ffd42b58989338a14c79d5b447a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

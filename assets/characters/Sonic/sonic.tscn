@@ -36,33 +36,33 @@ animation_player = NodePath("AnimationPlayer")
 jump_ball = NodePath("SonicRig/Skeleton3D/JumpBall")
 super_state_handler = NodePath("SuperStatus")
 
-[node name="JumpBall" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="0" unique_id=1169463689]
+[node name="JumpBall" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="0" unique_id=1537472431]
 visible = false
 surface_material_override/0 = ExtResource("3_kvhlp")
 
-[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="1" unique_id=49963730]
+[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="1" unique_id=28701013]
 surface_material_override/1 = SubResource("ShaderMaterial_as1qj")
 
-[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="2" unique_id=2064698058]
+[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="2" unique_id=1970272910]
 visible = false
 
-[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="3" unique_id=1900565890]
+[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="3" unique_id=1797991949]
 visible = false
 
-[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="4" unique_id=966531764]
+[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="4" unique_id=817752763]
 visible = false
 
-[node name="SonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="5" unique_id=683955500]
+[node name="SonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="5" unique_id=734653484]
 surface_material_override/0 = ExtResource("5_kn6l4")
 surface_material_override/1 = ExtResource("6_d57g0")
 surface_material_override/2 = ExtResource("7_tm868")
 surface_material_override/3 = SubResource("ShaderMaterial_bv7t8")
 surface_material_override/4 = ExtResource("8_d57g0")
 
-[node name="SSonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="6" unique_id=1795961002]
+[node name="SSonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="6" unique_id=1900944831]
 visible = false
 
-[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(2089378629) index="7" unique_id=1881779348]
+[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="7" unique_id=1881779348]
 setting_count = 1
 settings/0/root_bone_name = "Physics"
 settings/0/root_bone = 10
@@ -90,7 +90,7 @@ settings/0/joints/1/bone = 11
 settings/0/enable_all_child_collisions = false
 settings/0/collision_count = 0
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1767296491]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1668907501]
 playback_default_blend_time = 0.2
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." index="2" unique_id=158256618]
@@ -103,10 +103,6 @@ super_model = NodePath("../SonicRig/Skeleton3D/SSonicMDL")
 
 [node name="UpgradeModelHandler" type="Node" parent="." index="4" unique_id=572600442]
 script = ExtResource("4_ip7d3")
-light_shoes = NodePath("../SonicRig/Skeleton3D/LightShoesMDL")
-bounce_bracelet = NodePath("../SonicRig/Skeleton3D/Sonic_BraceletMDL")
-flame_ring_hero = NodePath("../SonicRig/Skeleton3D/Sonic_FlameMDL")
-magic_gloves = NodePath("../SonicRig/Skeleton3D/Sonic_MagicGloveMDL")
 
 [node name="VoiceManager" type="Node3D" parent="." index="5" unique_id=1434843038]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

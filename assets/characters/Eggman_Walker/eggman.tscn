@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ckgg1q8svwn8r" path="res://assets/characters/Eggman_Walker/EggMechMDL.glb" id="1_32le3"]
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_1u12h"]
 [ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_taaro"]
-[ext_resource type="Texture2D" uid="uid://bowybeds7kyip" path="res://assets/characters/Eggman/EggmanMDL_egtx_02.png" id="4_hr38e"]
+[ext_resource type="Texture2D" uid="uid://bowybeds7kyip" path="res://assets/characters/Eggman/egtx_02.png" id="4_hr38e"]
 [ext_resource type="Texture2D" uid="uid://cxefge8pury0v" path="res://assets/characters/Eggman_Walker/EggMechMDL_ew7.png" id="4_ubndd"]
 [ext_resource type="Material" uid="uid://c63duqtadl788" path="res://assets/characters/Eggman/egtx_05.tres" id="5_t1rkj"]
 [ext_resource type="Material" uid="uid://s56686nwbmso" path="res://assets/characters/Eggman/egtx_04.tres" id="6_r3y41"]

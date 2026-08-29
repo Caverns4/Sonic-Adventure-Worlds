@@ -6,9 +6,9 @@ enum ID{
 	SONIC,
 	MILES,
 	KNUCKLES,
-	EGGMAN,
-	METAL_SONIC, # Eventually
-	AMY, # Eventually
+	AMY, # TODO
+	EGGMAN, # TODO
+	METAL_SONIC, # TODO
 }
 
 const data: Dictionary = {
@@ -28,6 +28,10 @@ const data: Dictionary = {
 		'name': "Knuckles",
 		'icon': "res://assets/icons/zanki_knuckle.png"
 	},
+	ID.AMY: {
+		'name': "Amy",
+		'icon': "res://assets/icons/zanki_amy.png"
+	},
 	ID.EGGMAN: {
 		'name': "Eggman",
 		'icon': "res://assets/icons/zanki_egg.png"
@@ -35,9 +39,5 @@ const data: Dictionary = {
 	ID.METAL_SONIC: {
 		'name': "Metal Sonic",
 		'icon': "res://assets/icons/zanki_metal.png"
-	},
-	ID.AMY: {
-		'name': "Amy",
-		'icon': "res://assets/icons/zanki_amy.png"
 	},
 }
