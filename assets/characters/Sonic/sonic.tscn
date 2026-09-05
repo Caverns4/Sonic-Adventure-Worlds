@@ -11,6 +11,9 @@
 [ext_resource type="Material" uid="uid://dianj10yojqo7" path="res://assets/characters/Sonic/sonic_soapshoes.tres" id="6_d57g0"]
 [ext_resource type="Material" uid="uid://bcsmrowegg8n2" path="res://assets/characters/Sonic/stx_01.tres" id="7_tm868"]
 [ext_resource type="Material" uid="uid://be74p87haiew0" path="res://assets/characters/Sonic/stx_eye.tres" id="8_d57g0"]
+[ext_resource type="Texture2D" uid="uid://c3tttyqkbxo38" path="res://assets/characters/Sonic/stx_ref00.png" id="8_tm868"]
+[ext_resource type="Material" uid="uid://c4tu2dc1yd62m" path="res://assets/characters/Sonic/sstx_01.tres" id="10_fw32x"]
+[ext_resource type="Material" uid="uid://d0roh0nq7b8s2" path="res://assets/characters/Sonic/sstx_02.tres" id="11_pjyjj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_as1qj"]
 render_priority = 0
@@ -20,7 +23,16 @@ shader_parameter/albedo_color = Color(1, 1, 1, 1)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bv7t8"]
 render_priority = 0
 shader = ExtResource("3_bv7t8")
+shader_parameter/albedo_tex = ExtResource("8_tm868")
 shader_parameter/albedo_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fw32x"]
+albedo_color = Color(1, 1, 0.28627452, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.34510693, 0.3451066, 4.3317675e-07, 1)
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ip7d3"]
 properties/0/path = NodePath(".:rotation")
@@ -36,33 +48,98 @@ animation_player = NodePath("AnimationPlayer")
 jump_ball = NodePath("SonicRig/Skeleton3D/JumpBall")
 super_state_handler = NodePath("SuperStatus")
 
-[node name="JumpBall" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="0" unique_id=1537472431]
+[node name="Skeleton3D" parent="SonicRig" parent_id_path=PackedInt32Array(1634986665) index="0" unique_id=220256646]
+bones/1/position = Vector3(0, 0.47157976, 0)
+bones/4/rotation = Quaternion(0.00039184364, 0, 0, 0.99999994)
+bones/5/rotation = Quaternion(-0.0003918436, 0, 0, 0.99999994)
+bones/7/rotation = Quaternion(0.0018056484, 0.70710546, 0.7071054, 0.0007667031)
+bones/8/rotation = Quaternion(-1.0539131e-06, 0.7071063, 0.70710737, 9.806151e-07)
+bones/9/rotation = Quaternion(1.0539131e-06, 0.7071063, 0.70710737, -9.806151e-07)
+bones/10/rotation = Quaternion(-0.7071068, 0, 0, 0.7071068)
+bones/13/rotation = Quaternion(-0.41889325, 0.40851513, -0.066264786, 0.80824065)
+bones/14/rotation = Quaternion(0.0028209146, -0.00040689574, -0.22082807, 0.9753086)
+bones/15/rotation = Quaternion(-0.13097163, -0.40276077, 0.013357116, 0.9057879)
+bones/16/rotation = Quaternion(0.25013396, 0.9488448, -0.19033873, -0.029963871)
+bones/17/rotation = Quaternion(0.00012907908, 0.008119469, -0.029395796, 0.99953485)
+bones/18/rotation = Quaternion(-0.00012427432, -0.0038370637, 0.014232611, 0.99989134)
+bones/19/rotation = Quaternion(-0.17906453, 1.5491629e-06, 1.7395453e-06, 0.98383737)
+bones/20/rotation = Quaternion(-0.17906635, -2.0614175e-08, 1.11764464e-07, 0.983837)
+bones/21/rotation = Quaternion(-0.2078186, -0.02906159, -0.004411039, 0.9777256)
+bones/22/rotation = Quaternion(1.5700629e-06, 1.5729532e-06, 1.6482468e-06, 1)
+bones/23/rotation = Quaternion(-0.17906559, 7.871377e-07, 6.708759e-08, 0.9838372)
+bones/24/rotation = Quaternion(-0.2078206, -0.029063588, -0.0044115707, 0.97772515)
+bones/25/rotation = Quaternion(2.2875229e-06, 2.2950392e-06, 1.6981003e-06, 1)
+bones/26/rotation = Quaternion(-0.17906563, 7.888084e-07, -5.1551524e-08, 0.9838372)
+bones/27/rotation = Quaternion(-0.1650298, 0.013963945, 0.0027476079, 0.9861859)
+bones/28/rotation = Quaternion(1.9046648e-06, 1.9159356e-06, 1.3780457e-06, 1)
+bones/29/rotation = Quaternion(-0.17906445, 1.8737359e-06, 4.0055826e-07, 0.98383737)
+bones/30/rotation = Quaternion(-0.17907013, -3.8109674e-06, -4.4879158e-07, 0.9838363)
+bones/32/rotation = Quaternion(-0.41889325, -0.40851513, 0.06626477, 0.80824065)
+bones/33/rotation = Quaternion(0.002820937, 0.00040689186, 0.2208281, 0.9753086)
+bones/34/rotation = Quaternion(-0.13097167, 0.40276074, -0.013357109, 0.905788)
+bones/35/rotation = Quaternion(-0.25013393, 0.9488448, -0.1903387, 0.029963873)
+bones/36/rotation = Quaternion(0.00012908282, -0.00811947, 0.029395796, 0.99953485)
+bones/37/rotation = Quaternion(-0.00012426593, 0.003837064, -0.014232612, 0.99989134)
+bones/38/rotation = Quaternion(-0.17906453, -1.5508194e-06, -1.739545e-06, 0.98383737)
+bones/39/rotation = Quaternion(-0.17906636, 2.1087486e-08, -1.12947745e-07, 0.983837)
+bones/40/rotation = Quaternion(-0.2078186, 0.029061593, 0.00441104, 0.9777256)
+bones/41/rotation = Quaternion(1.5775717e-06, -1.5738846e-06, -1.6487124e-06, 1)
+bones/42/rotation = Quaternion(-0.1790656, -7.8512613e-07, -6.614099e-08, 0.9838372)
+bones/43/rotation = Quaternion(-0.2078206, 0.029063588, 0.0044115745, 0.97772515)
+bones/44/rotation = Quaternion(2.2950317e-06, -2.2959705e-06, -1.6986824e-06, 1)
+bones/45/rotation = Quaternion(-0.17906561, -7.865602e-07, 5.1314856e-08, 0.9838372)
+bones/46/rotation = Quaternion(-0.16502981, -0.013963947, -0.0027476067, 0.9861859)
+bones/47/rotation = Quaternion(1.9121735e-06, -1.916867e-06, -1.3774636e-06, 1)
+bones/48/rotation = Quaternion(-0.17906448, -1.8718426e-06, -4.0055832e-07, 0.98383737)
+bones/49/rotation = Quaternion(-0.17907016, 3.811914e-06, 4.5068498e-07, 0.9838363)
+bones/50/rotation = Quaternion(0.97481465, 0.13173632, -0.022771528, 0.17850296)
+bones/50/scale = Vector3(0.99998534, 0.99999917, 0.9999982)
+bones/51/rotation = Quaternion(0.34420252, 0.00023116125, -0.0012070625, 0.9388946)
+bones/52/rotation = Quaternion(0.57996744, 0.0859838, 0.09720516, 0.8042362)
+bones/52/scale = Vector3(0.99999946, 0.9999987, 1.0000017)
+bones/53/rotation = Quaternion(3.8012524e-07, 1.3936741e-15, 1, -7.4505078e-09)
+bones/54/rotation = Quaternion(0.97481465, -0.13173634, 0.022771485, 0.17850298)
+bones/54/scale = Vector3(0.9999853, 0.99999917, 0.9999982)
+bones/55/rotation = Quaternion(0.34420252, -0.0002311577, 0.0012070597, 0.9388946)
+bones/56/rotation = Quaternion(0.5799674, -0.08598376, -0.09720519, 0.8042361)
+bones/56/scale = Vector3(0.99999946, 0.99999875, 1.0000017)
+bones/57/rotation = Quaternion(-3.8012524e-07, -2.1590395e-15, 1, 7.4505078e-09)
+bones/58/rotation = Quaternion(0.8969471, -5.5283493e-07, -5.528348e-07, -0.44213796)
+
+[node name="JumpBall" parent="SonicRig/Skeleton3D" index="0" unique_id=1537472431]
 visible = false
 surface_material_override/0 = ExtResource("3_kvhlp")
 
-[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="1" unique_id=28701013]
+[node name="LightShoesMDL" parent="SonicRig/Skeleton3D" index="1" unique_id=28701013]
+visible = false
 surface_material_override/1 = SubResource("ShaderMaterial_as1qj")
 
-[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="2" unique_id=1970272910]
+[node name="Sonic_BraceletMDL" parent="SonicRig/Skeleton3D" index="2" unique_id=1970272910]
 visible = false
 
-[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="3" unique_id=1797991949]
+[node name="Sonic_FlameMDL" parent="SonicRig/Skeleton3D" index="3" unique_id=1797991949]
 visible = false
 
-[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="4" unique_id=817752763]
+[node name="Sonic_MagicGloveMDL" parent="SonicRig/Skeleton3D" index="4" unique_id=817752763]
 visible = false
 
-[node name="SonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="5" unique_id=734653484]
+[node name="SonicMDL" parent="SonicRig/Skeleton3D" index="5" unique_id=734653484]
 surface_material_override/0 = ExtResource("5_kn6l4")
 surface_material_override/1 = ExtResource("6_d57g0")
 surface_material_override/2 = ExtResource("7_tm868")
 surface_material_override/3 = SubResource("ShaderMaterial_bv7t8")
 surface_material_override/4 = ExtResource("8_d57g0")
 
-[node name="SSonicMDL" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="6" unique_id=1900944831]
+[node name="SSonicMDL" parent="SonicRig/Skeleton3D" index="6" unique_id=1900944831]
 visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_fw32x")
+surface_material_override/1 = ExtResource("5_kn6l4")
+surface_material_override/2 = ExtResource("6_d57g0")
+surface_material_override/3 = SubResource("ShaderMaterial_bv7t8")
+surface_material_override/4 = ExtResource("10_fw32x")
+surface_material_override/5 = ExtResource("11_pjyjj")
 
-[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" parent_id_path=PackedInt32Array(220256646) index="7" unique_id=1881779348]
+[node name="SpikesPhysics" type="SpringBoneSimulator3D" parent="SonicRig/Skeleton3D" index="7" unique_id=1881779348]
 setting_count = 1
 settings/0/root_bone_name = "Physics"
 settings/0/root_bone = 10

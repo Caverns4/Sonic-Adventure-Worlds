@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhifkyvw7pj1x"
-path.bptc="res://.godot/imported/Sonic_SpinTex.png-5ac2fdc925585ce7cf93f9424a079fa0.bptc.ctex"
+path="res://.godot/imported/Sonic_SpinTex.png-5ac2fdc925585ce7cf93f9424a079fa0.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "0b2f81ca14d99b88017bbf573f30a35d"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/characters/Sonic/Sonic_SpinTex.png"
-dest_files=["res://.godot/imported/Sonic_SpinTex.png-5ac2fdc925585ce7cf93f9424a079fa0.bptc.ctex"]
+dest_files=["res://.godot/imported/Sonic_SpinTex.png-5ac2fdc925585ce7cf93f9424a079fa0.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0

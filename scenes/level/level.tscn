@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d0dgljwwl463n" path="res://scripts/level.gd" id="1_e1sh7"]
 [ext_resource type="Texture2D" uid="uid://dfodmmunvltd8" path="res://assets/white.svg" id="2_vpf64"]
-[ext_resource type="PackedScene" uid="uid://ffdyw86vrsm6" path="res://entitites/HUD/player_hud.tscn" id="6_vpf64"]
 [ext_resource type="PackedScene" uid="uid://35rubp4wfliu" path="res://entitites/generic_objects/ring.tscn" id="7_wcngd"]
 [ext_resource type="PackedScene" uid="uid://dywunkm3nx6eo" path="res://entitites/generic_objects/dashpanel.tscn" id="8_xv074"]
 
@@ -122,5 +121,3 @@ speed = 26
 [node name="Dashpanel4" parent="ObjectsContainer" unique_id=870222240 instance=ExtResource("8_xv074")]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 0, 0, 7)
 speed = 26
-
-[node name="TestHUD" parent="." unique_id=791427141 instance=ExtResource("6_vpf64")]

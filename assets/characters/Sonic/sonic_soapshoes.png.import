@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caxttdf8tve8s"
-path.s3tc="res://.godot/imported/sonic_soapshoes.png-3834447ed0cf6e0f4913a325b0b97739.s3tc.ctex"
+path="res://.godot/imported/sonic_soapshoes.png-3834447ed0cf6e0f4913a325b0b97739.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "3c50c5026a968b0dee33cd2d25d81e61"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/characters/Sonic/sonic_soapshoes.png"
-dest_files=["res://.godot/imported/sonic_soapshoes.png-3834447ed0cf6e0f4913a325b0b97739.s3tc.ctex"]
+dest_files=["res://.godot/imported/sonic_soapshoes.png-3834447ed0cf6e0f4913a325b0b97739.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +26,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

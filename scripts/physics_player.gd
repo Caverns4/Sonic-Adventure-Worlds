@@ -7,7 +7,8 @@ extends Character
 
 @export_group("Ground movement")
 @export var top_speed: float = 6.0
-@export var base_aceleration: float = 16
+@export var base_aceleration: float = 12.0
+@export var turn_sharpness: float = 10 ## TODO
 
 @export_group("Air movement")
 @export var jump_vel: float = 6.5
@@ -66,14 +67,14 @@ var ring_count: int = 0 :
 var ground_timer: float = 0.0
 
 ## The point at which walking becomes running
-var speed_margin: float = 10.0
+var speed_margin: float = 16.0
 
 var movement_locked: bool = false
 var jumping: bool = false
 
 func _ready():
 	Global.players.append(self)
-
+	speed_margin = 5.4*3
 	for i in casters:
 		i.position -= i.position.normalized()*margin
 	super()
@@ -233,7 +234,7 @@ func _check_fall_and_respawn():
 		_respawn()
 
 func _respawn():
-	global_transform.origin = Vector3.ZERO
+	global_transform.origin = Vector3(0,1,0)
 	velocity = Vector3.ZERO
 	stick = false
 	up_direction = Vector3.UP

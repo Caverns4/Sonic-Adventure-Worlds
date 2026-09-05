@@ -18,6 +18,8 @@ func _physics_process(delta: float) -> void:
 	var hud_time_hundredths:int = int(hud_time * 100) % 100
 	time_counter.text = "TIME: %2d'%02d\"%02d" % [hud_time_minutes,hud_time_seconds,hud_time_hundredths]
 
+	$Bottom/Speed.text = str(round(Global.players[0].velocity.length() * 3600.0 / 1609.34)*10) + "MPH"
+
 func _setup_life_counter(character: int) -> void:
 	$Bottom/LifeIcon.texture = load(CharacterData.data[character].get('icon',''))
 

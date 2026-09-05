@@ -92,7 +92,7 @@ func update_super_state(is_super: bool) -> void:
 	else:
 		is_super = false
 
-var speed_based_animations: Array[String] = ["Walk","Run"]
+var speed_based_animations: Array[String] = ["Walk","Run","Jog"]
 
 func update_animation_speed() -> void:
 	if !parent: return
@@ -103,6 +103,6 @@ func update_animation_speed() -> void:
 	var speed_scale: float = 1.0
 	for i in speed_based_animations:
 		if animation_player.current_animation.find(i) >= 0:
-			speed_scale = clampf(parent.velocity.length()/10,0.1,8.0)
+			speed_scale = clampf(parent.velocity.length()/8,0.5,20.0)
 			break
 	animation_player.speed_scale = speed_scale

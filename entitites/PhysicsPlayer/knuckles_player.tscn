@@ -8,9 +8,15 @@
 [node name="KnucklesPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_rkewr")]
 character = 3
 player_skin = NodePath("Pivot/KnuckMDL")
+top_speed = 6.0
+base_aceleration = 12.0
 jump_vel = 6.0
+jump_hold_vel = 20.0
+a_button_air_ability = ""
 x_button_ground_ability = "Spindash"
+x_button_air_ability = ""
 y_button_ground_ability = "Rolling"
+y_button_air_ability = ""
 
 [node name="KnuckMDL" parent="Pivot" parent_id_path=PackedInt32Array(484166385) index="3" unique_id=372340214 node_paths=PackedStringArray("parent") instance=ExtResource("2_cootw")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)

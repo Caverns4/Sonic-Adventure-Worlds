@@ -6,9 +6,10 @@
 [node name="AmyPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_lyvp0")]
 character = 4
 player_skin = NodePath("Pivot/AmyMDL2")
-top_speed = 4.5
+top_speed = 5.0
 base_aceleration = 12.0
 jump_vel = 6.0
+jump_hold_vel = 20.0
 a_button_air_ability = ""
 x_button_ground_ability = ""
 x_button_air_ability = ""

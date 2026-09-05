@@ -9,8 +9,10 @@ radius = 0.75
 [node name="EggmanPlayer" unique_id=2099542631 node_paths=PackedStringArray("player_skin") instance=ExtResource("1_6ir7c")]
 character = 5
 player_skin = NodePath("Pivot/EggmanMDL")
-top_speed = 5.0
-jump_vel = 4.5
+top_speed = 5.5
+base_aceleration = 10.0
+jump_vel = 5.5
+jump_hold_vel = 20.0
 a_button_air_ability = ""
 x_button_ground_ability = ""
 x_button_air_ability = ""

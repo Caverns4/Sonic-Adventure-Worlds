@@ -78,3 +78,13 @@ offset_bottom = -16.0
 text = "3"
 label_settings = SubResource("LabelSettings_cw4nv")
 horizontal_alignment = 2
+
+[node name="Speed" type="Label" parent="Bottom" unique_id=545801667]
+layout_mode = 0
+offset_left = 568.0
+offset_top = -80.0
+offset_right = 840.0
+offset_bottom = -27.0
+text = "0MPH"
+label_settings = SubResource("LabelSettings_cw4nv")
+horizontal_alignment = 1
