@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl6r6a4gepufh"
-path.s3tc="res://.godot/imported/EggMechMDL_ew16.png-640b2b98334b6ab2a10938614f1b75ae.s3tc.ctex"
+uid="uid://7rpehmakb268"
+path.s3tc="res://.godot/imported/EggMechMDL_ew4.png-005472390f88c4386d63a36a6304622a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0e20b3176b595f0dca2d15c823749ccc"
+"md5": "42b8183d40784f08a426d8cdda31611e"
 }
 
 [deps]
 
-source_file="res://assets/characters/Eggman_Walker/EggMechMDL_ew16.png"
-dest_files=["res://.godot/imported/EggMechMDL_ew16.png-640b2b98334b6ab2a10938614f1b75ae.s3tc.ctex"]
+source_file="res://assets/characters/Eggman_Walker/EggMechMDL_ew4.png"
+dest_files=["res://.godot/imported/EggMechMDL_ew4.png-005472390f88c4386d63a36a6304622a.s3tc.ctex"]
 
 [params]
 

@@ -44,8 +44,10 @@ func animate_on_ground(_velocity: Vector3) -> void:
 			next_anim = 'Super_Run'
 		else:
 			next_anim = 'Run'
-	elif _velocity.length() > 0.0:
+	elif _velocity.length() > 10.0:
 		next_anim = 'Jog'
+	elif _velocity.length() > 0.0:
+		next_anim = 'Walk'
 	elif idle_time < 6.0:
 		next_anim = 'Idle'
 	else:

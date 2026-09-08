@@ -9,6 +9,7 @@ extends Character
 @export var top_speed: float = 6.0
 @export var base_aceleration: float = 12.0
 @export var turn_sharpness: float = 10 ## TODO
+@export var braking_rate: float = 40
 
 @export_group("Air movement")
 @export var jump_vel: float = 6.5
@@ -111,7 +112,7 @@ func get_direction_from_Input() -> Vector3:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir: Vector2 = Vector2.ZERO
-	var direction: Vector3 = velocity.normalized()
+	var direction: Vector3 = velocity
 	if direction_lock_time <= 0:
 		input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 		if abs(input_dir.x) < 0.125:
@@ -121,7 +122,7 @@ func get_direction_from_Input() -> Vector3:
 	
 		# calculate the forward direction based on input and direction from the floor and the camera
 		var calcForward = camera.global_position.direction_to(global_position).slide(up_direction)
-		direction = ((calcForward.rotated(up_direction,deg_to_rad(90))*-input_dir.x)+(calcForward*-input_dir.y)).normalized()
+		direction = ((calcForward.rotated(up_direction,deg_to_rad(90))*-input_dir.x)+(calcForward*-input_dir.y))
 	return direction
 
 func apply_gravity(delta: float ) -> void:
@@ -142,6 +143,10 @@ func check_jump() -> void:
 		movement_locked = false
 		player_skin.play_jump_animation("Jump")
 		jump_sfx.play()
+
+func check_jump_button() -> void:
+	if Input.is_action_just_pressed("jump"):
+		check_jump()
 
 func check_ground_abilities() -> void:
 	if Input.is_action_just_pressed("jump"):

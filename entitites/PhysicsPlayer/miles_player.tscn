@@ -25,6 +25,6 @@ parent = NodePath("../..")
 [node name="BrakeSFX" parent="." index="6" unique_id=1900982292]
 stream = ExtResource("3_1yikb")
 
-[node name="Spindash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="4" unique_id=1881223295]
+[node name="Spindash" type="Node" parent="StateContainer" parent_id_path=PackedInt32Array(263892785) index="5" unique_id=1881223295]
 script = ExtResource("4_1i1r8")
 state_name = &"Spindash"

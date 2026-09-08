@@ -8,25 +8,15 @@
 [ext_resource type="Script" uid="uid://jko3bbm38hg7" path="res://scripts/State Machine/Player/player_air.gd" id="6_w3uin"]
 [ext_resource type="Script" uid="uid://bgkvydjw5fb2n" path="res://scripts/State Machine/Player/player_rolling.gd" id="7_jdvc7"]
 [ext_resource type="Script" uid="uid://fat8r2tgn3w" path="res://scripts/State Machine/Player/player_jumping.gd" id="8_em02n"]
+[ext_resource type="Script" uid="uid://cns8i017ynhlq" path="res://scripts/State Machine/Player/player_brake.gd" id="9_em02n"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1j11v"]
 
-[node name="PhysicsPlayer" type="CharacterBody3D" unique_id=2099542631 node_paths=PackedStringArray("hud")]
+[node name="PhysicsPlayer" type="CharacterBody3D" unique_id=2099542631]
 collision_layer = 4096
 collision_mask = 4099
 floor_snap_length = 0.25
 script = ExtResource("1_rlyl0")
-character = null
-hud = NodePath("")
-top_speed = null
-base_aceleration = null
-jump_vel = null
-jump_hold_vel = null
-a_button_air_ability = null
-x_button_ground_ability = null
-x_button_air_ability = null
-y_button_ground_ability = null
-y_button_air_ability = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=622665701]
 shape = SubResource("SphereShape3D_1j11v")
@@ -103,3 +93,7 @@ state_name = &"Rolling"
 [node name="Jumping" type="Node" parent="StateContainer" unique_id=685194192]
 script = ExtResource("8_em02n")
 state_name = &"Jumping"
+
+[node name="Brake" type="Node" parent="StateContainer" unique_id=151984436]
+script = ExtResource("9_em02n")
+state_name = &"Brake"
