@@ -8,6 +8,7 @@ const player_scenes: Array[PackedScene] = [
 	preload("res://entitites/PhysicsPlayer/knuckles_player.tscn"),# Knuckles
 	preload("res://entitites/PhysicsPlayer/amy_player.tscn"),# Amy
 	preload("res://entitites/PhysicsPlayer/eggman_player.tscn"),# Eggmech (Mech Eggman)
+	preload("res://entitites/PhysicsPlayer/PhysicsPlayer.tscn")
 ]
 
 var hud: GameHUD = null 

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kja55mcjjwwv"]
+
+[ext_resource type="Texture2D" uid="uid://lp0de8ib8f3n" path="res://assets/characters/Eggman/egtx_01.png" id="1_uwse0"]
+
+[resource]
+albedo_texture = ExtResource("1_uwse0")

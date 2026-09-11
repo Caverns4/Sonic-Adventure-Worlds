@@ -3,40 +3,50 @@
 [ext_resource type="PackedScene" uid="uid://ckgg1q8svwn8r" path="res://assets/characters/Eggman_Walker/EggMechMDL.glb" id="1_32le3"]
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_1u12h"]
 [ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="3_taaro"]
-[ext_resource type="Texture2D" uid="uid://bowybeds7kyip" path="res://assets/characters/Eggman/egtx_02.png" id="4_hr38e"]
+[ext_resource type="Material" uid="uid://dncvkeyl17ui3" path="res://assets/characters/Eggman/egtx_00.tres" id="3_weqh2"]
+[ext_resource type="Material" uid="uid://kja55mcjjwwv" path="res://assets/characters/Eggman/egtx_01.tres" id="4_61q46"]
 [ext_resource type="Texture2D" uid="uid://cxefge8pury0v" path="res://assets/characters/Eggman_Walker/EggMechMDL_ew7.png" id="4_ubndd"]
+[ext_resource type="Material" uid="uid://dor5xrhrkbcgf" path="res://assets/characters/Eggman/egtx_02.tres" id="5_liep8"]
 [ext_resource type="Material" uid="uid://c63duqtadl788" path="res://assets/characters/Eggman/egtx_05.tres" id="5_t1rkj"]
+[ext_resource type="Material" uid="uid://u5soacljolrk" path="res://assets/characters/Eggman/egtx_03.tres" id="6_ckahc"]
 [ext_resource type="Material" uid="uid://s56686nwbmso" path="res://assets/characters/Eggman/egtx_04.tres" id="6_r3y41"]
+[ext_resource type="Material" uid="uid://c61ohabaa3cyp" path="res://assets/characters/Eggman/egtx_07.tres" id="8_8kmdo"]
+[ext_resource type="Texture2D" uid="uid://bv0lgg51eopo4" path="res://assets/characters/Eggman/egtx_06.png" id="10_874or"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ge71l"]
-render_priority = 0
-shader = ExtResource("3_taaro")
-shader_parameter/albedo_tex = ExtResource("4_hr38e")
-shader_parameter/albedo_color = Color(1, 1, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw7pd"]
+albedo_texture = ExtResource("10_874or")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fv108"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_taaro"]
 render_priority = 0
 shader = ExtResource("3_taaro")
 shader_parameter/albedo_tex = ExtResource("4_ubndd")
-shader_parameter/albedo_color = Color(1.353256, 1.353256, 1.3427868, 1)
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
 
 [node name="EggMechMDL" unique_id=1284735841 node_paths=PackedStringArray("animation_player") instance=ExtResource("1_32le3")]
 script = ExtResource("2_1u12h")
 animation_player = NodePath("AnimationPlayer")
 
-[node name="Cannon_Large_MDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="1" unique_id=792243022]
+[node name="Cannon_Large_MDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="1" unique_id=375017406]
 visible = false
 
-[node name="EggMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="2" unique_id=1283974261]
-surface_material_override/2 = SubResource("ShaderMaterial_ge71l")
-surface_material_override/4 = ExtResource("5_t1rkj")
-surface_material_override/6 = ExtResource("6_r3y41")
+[node name="EggMDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="2" unique_id=127328316]
+surface_material_override/0 = ExtResource("3_weqh2")
+surface_material_override/1 = ExtResource("4_61q46")
+surface_material_override/2 = ExtResource("5_liep8")
+surface_material_override/3 = ExtResource("6_ckahc")
+surface_material_override/4 = ExtResource("6_r3y41")
+surface_material_override/5 = ExtResource("8_8kmdo")
+surface_material_override/6 = ExtResource("5_t1rkj")
+surface_material_override/7 = SubResource("StandardMaterial3D_aw7pd")
 
-[node name="Mech_BaseMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="3" unique_id=1313429268]
-surface_material_override/11 = SubResource("ShaderMaterial_fv108")
+[node name="Mech_BaseMDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="3" unique_id=1745036529]
+surface_material_override/1 = SubResource("ShaderMaterial_taaro")
 
-[node name="PowerArmorMDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="5" unique_id=433487152]
+[node name="Mech_HoverJetsMDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="4" unique_id=656568920]
 visible = false
 
-[node name="Turret_Large_MDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1667072781) index="6" unique_id=2126917459]
+[node name="PowerArmorMDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="6" unique_id=747889015]
+visible = false
+
+[node name="Turret_Large_MDL" parent="EggMechRig/Skeleton3D" parent_id_path=PackedInt32Array(367144736) index="7" unique_id=665691413]
 visible = false

@@ -9,7 +9,7 @@ func _process_state(delta: float) -> void:
 	player.apply_gravity(delta)
 	player.velocity = move_in_air(delta,direction)
 	player.check_on_floor(delta,direction)
-	player.player_skin.animate_in_air(player.velocity)
+	if player.player_skin: player.player_skin.animate_in_air(player.velocity)
 	if player.is_on_floor():
 		player.change_state("Free",false)
 		player.land_sfx.play()

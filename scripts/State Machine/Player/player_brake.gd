@@ -2,7 +2,8 @@ extends State
 
 func _ready() -> void:
 	super()
-	player.player_skin.animation_player.animation_finished.connect(on_animation_finished)
+	if player.player_skin:
+		player.player_skin.animation_player.animation_finished.connect(on_animation_finished)
 
 func can_enter_state() -> bool:
 	if player.is_on_floor(): return true

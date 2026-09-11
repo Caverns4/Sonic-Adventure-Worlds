@@ -12,7 +12,7 @@ func _process_state(delta: float) -> void:
 	player.check_on_floor(delta,direction)
 	if !player.is_on_floor():
 		player.change_state("Air",player.jumping)
-	else:
+	elif player.player_skin:
 		player.player_skin.animate_on_ground(player.velocity)
 
 func move_on_ground(delta: float, direction: Vector3) -> Vector3:
