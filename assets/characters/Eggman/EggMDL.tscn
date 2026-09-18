@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://jivuj0yhnohs"]
+
+[ext_resource type="PackedScene" uid="uid://c48d06doaxq6p" path="res://assets/characters/Eggman/EggmanMDL.glb" id="1_tjlka"]
+[ext_resource type="Material" uid="uid://dncvkeyl17ui3" path="res://assets/characters/Eggman/egtx_00.tres" id="2_1j1ku"]
+[ext_resource type="Material" uid="uid://kja55mcjjwwv" path="res://assets/characters/Eggman/egtx_01.tres" id="3_03nt5"]
+[ext_resource type="Material" uid="uid://dor5xrhrkbcgf" path="res://assets/characters/Eggman/egtx_02.tres" id="4_udsnw"]
+[ext_resource type="Material" uid="uid://u5soacljolrk" path="res://assets/characters/Eggman/egtx_03.tres" id="5_7gea7"]
+[ext_resource type="Material" uid="uid://c63duqtadl788" path="res://assets/characters/Eggman/egtx_05.tres" id="6_tqgi6"]
+[ext_resource type="Material" uid="uid://c61ohabaa3cyp" path="res://assets/characters/Eggman/egtx_07.tres" id="7_ri4g8"]
+[ext_resource type="Material" uid="uid://s56686nwbmso" path="res://assets/characters/Eggman/egtx_04.tres" id="8_qley3"]
+[ext_resource type="Texture2D" uid="uid://bv0lgg51eopo4" path="res://assets/characters/Eggman/egtx_06.png" id="9_1m2wb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lapfs"]
+albedo_texture = ExtResource("9_1m2wb")
+
+[node name="EggmanMDL" unique_id=1358966362 instance=ExtResource("1_tjlka")]
+
+[node name="EggMDL" parent="Generic_Rig/Skeleton3D" parent_id_path=PackedInt32Array(813323910) index="0" unique_id=734347460]
+surface_material_override/0 = ExtResource("2_1j1ku")
+surface_material_override/1 = ExtResource("3_03nt5")
+surface_material_override/2 = ExtResource("4_udsnw")
+surface_material_override/3 = ExtResource("5_7gea7")
+surface_material_override/4 = ExtResource("6_tqgi6")
+surface_material_override/5 = ExtResource("7_ri4g8")
+surface_material_override/6 = ExtResource("8_qley3")
+surface_material_override/7 = SubResource("StandardMaterial3D_lapfs")

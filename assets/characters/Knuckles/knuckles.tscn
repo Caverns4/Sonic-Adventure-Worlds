@@ -17,6 +17,7 @@ render_priority = 0
 shader = ExtResource("3_ynpvs")
 shader_parameter/albedo_tex = ExtResource("4_buhyx")
 shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/alpha = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_e68fn"]
 radius = 0.22
@@ -25,29 +26,29 @@ radius = 0.22
 script = ExtResource("2_v2qnh")
 animation_player = NodePath("AnimationPlayer")
 
-[node name="KnucklMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="0" unique_id=1065684416]
+[node name="KnucklMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="0" unique_id=576043935]
 surface_material_override/0 = ExtResource("3_ocggu")
 surface_material_override/1 = ExtResource("4_7slp2")
 surface_material_override/2 = ExtResource("5_oppy5")
 
-[node name="Upg_AirMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="1" unique_id=511105262]
+[node name="Upg_AirMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="1" unique_id=1930005617]
 visible = false
 surface_material_override/0 = ExtResource("6_e68fn")
 
-[node name="Upg_ShovelClawMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="2" unique_id=383048283]
+[node name="Upg_ShovelClawMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="2" unique_id=927185788]
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_7mi4g")
 surface_material_override/1 = ExtResource("9_1hbca")
 
-[node name="Upg_SunglassesMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="3" unique_id=1164343800]
+[node name="Upg_SunglassesMDL" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="3" unique_id=824015288]
 visible = false
 surface_material_override/0 = ExtResource("10_v0dre")
 surface_material_override/1 = SubResource("ShaderMaterial_7mi4g")
 
-[node name="Hand_L" type="BoneAttachment3D" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="4" unique_id=552468391]
+[node name="Hand_L" type="BoneAttachment3D" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="4" unique_id=552468391]
 transform = Transform3D(-1.8729861e-07, 0.99999994, 1.4714897e-07, 2.0267908e-07, -1.4621764e-07, 1, 1, 1.8328228e-07, -2.0267908e-07, 0.46239504, 0.6564124, 6.7055225e-08)
 bone_name = "Hand.L"
-bone_idx = 14
+bone_idx = 15
 
 [node name="Punch_L" type="Area3D" parent="Knuck_Rig/Skeleton3D/Hand_L" index="0" unique_id=572245948]
 transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 6.334204e-15, 1.4210855e-14, 6.801363e-15, 1, 2.347307e-08, 0.13288975, 0)
@@ -58,10 +59,10 @@ collision_mask = 61440
 shape = SubResource("SphereShape3D_e68fn")
 debug_color = Color(0.9105971, 0.00010511756, 0.73122466, 0.41960785)
 
-[node name="Hand_R" type="BoneAttachment3D" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(1152686132) index="5" unique_id=797513416]
+[node name="Hand_R" type="BoneAttachment3D" parent="Knuck_Rig/Skeleton3D" parent_id_path=PackedInt32Array(144718086) index="5" unique_id=797513416]
 transform = Transform3D(-1.7904131e-07, -0.99999994, -1.4901161e-07, -2.028537e-07, -1.4901161e-07, 1, -1, 1.766357e-07, -2.0273728e-07, -0.46239504, 0.6564124, 6.519258e-08)
 bone_name = "Hand.R"
-bone_idx = 33
+bone_idx = 34
 
 [node name="Punch_R" type="Area3D" parent="Knuck_Rig/Skeleton3D/Hand_R" index="0" unique_id=773517022]
 transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 6.334204e-15, 1.4210855e-14, 6.801363e-15, 1, 2.347307e-08, 0.13288975, 0)

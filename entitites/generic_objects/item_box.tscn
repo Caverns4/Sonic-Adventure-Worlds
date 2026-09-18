@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://hv08sofos5pc"]
+
+[ext_resource type="PackedScene" uid="uid://bieawf02yy2lu" path="res://assets/always_objects/ItemBox.glb" id="1_a0xrd"]
+[ext_resource type="Texture2D" uid="uid://b2dqaa4sgxr5t" path="res://assets/always_objects/sikake_01_128.png" id="2_wfkkg"]
+[ext_resource type="Texture2D" uid="uid://cv1587u7y0rdx" path="res://assets/always_objects/CapsuleIcons.png" id="3_2bp4x"]
+[ext_resource type="Texture2D" uid="uid://bswurxe3j40v5" path="res://assets/always_objects/board_ura.png" id="3_wfkkg"]
+[ext_resource type="Shader" uid="uid://cpivme2si6tbs" path="res://resource/shaders/retro_reflection_texture.gdshader" id="4_yae4a"]
+[ext_resource type="Texture2D" uid="uid://dj3a2ym5320kl" path="res://assets/always_objects/sikake_36_32.png" id="5_u7cox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m8c8"]
+albedo_texture = ExtResource("2_wfkkg")
+texture_filter = 1
+texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvywq"]
+albedo_texture = ExtResource("3_wfkkg")
+texture_filter = 1
+texture_repeat = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqcw1"]
+render_priority = 0
+shader = ExtResource("4_yae4a")
+shader_parameter/albedo_tex = ExtResource("5_u7cox")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/alpha = 0.40000000596048
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bp4x"]
+
+[node name="ItemBox" unique_id=1988331417 instance=ExtResource("1_a0xrd")]
+
+[node name="ItemBox_MDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1671454346) index="0" unique_id=1668037693]
+surface_material_override/0 = SubResource("StandardMaterial3D_2m8c8")
+surface_material_override/1 = SubResource("StandardMaterial3D_jvywq")
+surface_material_override/2 = SubResource("ShaderMaterial_fqcw1")
+
+[node name="ItemIcon_MDL" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1671454346) index="1" unique_id=1259544845]
+visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_2bp4x")
+
+[node name="Sprite3D" type="Sprite3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1671454346) index="2" unique_id=282644457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+billboard = 2
+texture = ExtResource("3_2bp4x")
+hframes = 6
+vframes = 4

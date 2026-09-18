@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://v8j54rbc0ik" path="res://scripts/CharacterAvatar.gd" id="2_tyejh"]
 [ext_resource type="Material" uid="uid://brkvrnx72hb0l" path="res://assets/characters/Miles/mtx_00.tres" id="3_k8xp2"]
 [ext_resource type="PackedScene" uid="uid://ol28anr30q0h" path="res://assets/characters/Miles/MilesTailsMDL.glb" id="3_tyejh"]
-[ext_resource type="Material" uid="uid://c2dgng38ujcl4" path="res://assets/characters/Miles/mtx_01.tres" id="4_dli5y"]
-[ext_resource type="Material" uid="uid://bxanmpwecxd08" path="res://assets/characters/Miles/mtx_02.tres" id="5_cvqrn"]
+[ext_resource type="Material" uid="uid://c2dgng38ujcl4" path="res://assets/characters/Miles/mtx_s000.tres" id="4_dli5y"]
+[ext_resource type="Material" uid="uid://bxanmpwecxd08" path="res://assets/characters/Miles/mtx_01.tres" id="5_cvqrn"]
 [ext_resource type="Script" uid="uid://74bdp7nu86i0" path="res://scripts/PlayerComponents/Miles/AnimatedAttachment.gd" id="7_dli5y"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dli5y"]
@@ -24,12 +24,12 @@ script = ExtResource("2_tyejh")
 animation_player = NodePath("AnimationPlayer")
 attachments = [NodePath("MilesRig/Skeleton3D/TailAttach/MilesTailsMDL")]
 
-[node name="MilesMDL" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(2107998556) index="0" unique_id=897272063]
+[node name="MilesMDL" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(284267501) index="0" unique_id=1245622197]
 surface_material_override/0 = ExtResource("3_k8xp2")
-surface_material_override/1 = ExtResource("4_dli5y")
-surface_material_override/2 = ExtResource("5_cvqrn")
+surface_material_override/1 = ExtResource("5_cvqrn")
+surface_material_override/2 = ExtResource("4_dli5y")
 
-[node name="TailAttach" type="BoneAttachment3D" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(2107998556) index="1" unique_id=523915180]
+[node name="TailAttach" type="BoneAttachment3D" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(284267501) index="1" unique_id=523915180]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.2210914e-18, 0.32673106, -0.021103943)
 bone_name = "Tail.1"
 bone_idx = 57
@@ -38,24 +38,14 @@ bone_idx = 57
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 script = ExtResource("7_dli5y")
 
-[node name="Skeleton3D" parent="MilesRig/Skeleton3D/TailAttach/MilesTailsMDL/TailsRig" parent_id_path=PackedInt32Array(1539185128, 1618082985) index="0" unique_id=1525603094]
-bones/1/position = Vector3(-9.4506846e-05, 0.04489844, 0.020846657)
-bones/1/rotation = Quaternion(-0.16320579, 0.5538865, 0.4378035, 0.68913126)
-bones/2/rotation = Quaternion(0.19228394, -4.275502e-08, -1.5931388e-07, 0.98133934)
-bones/3/rotation = Quaternion(0.10736343, 3.890922e-08, 7.141148e-08, 0.99421984)
-bones/4/position = Vector3(7.0151286e-06, 0.04489811, -0.020847507)
-bones/4/rotation = Quaternion(0.03662797, 0.61824095, -0.34224445, 0.70661545)
-bones/5/rotation = Quaternion(-0.15758678, 3.677173e-09, 2.1151955e-07, 0.98750514)
-bones/6/rotation = Quaternion(-0.1804088, -2.7315828e-08, -1.207128e-07, 0.98359174)
-
-[node name="TailsMDL" parent="MilesRig/Skeleton3D/TailAttach/MilesTailsMDL/TailsRig/Skeleton3D" index="0" unique_id=1901880998]
+[node name="TailsMDL" parent="MilesRig/Skeleton3D/TailAttach/MilesTailsMDL/TailsRig/Skeleton3D" parent_id_path=PackedInt32Array(1539185128, 1730399531) index="0" unique_id=1748682743]
 surface_material_override/0 = ExtResource("3_k8xp2")
 
-[node name="AnimationPlayer" parent="MilesRig/Skeleton3D/TailAttach/MilesTailsMDL" index="1" unique_id=1915580322]
+[node name="AnimationPlayer" parent="MilesRig/Skeleton3D/TailAttach/MilesTailsMDL" index="1" unique_id=844300161]
 autoplay = &"Tail_Idle"
 
-[node name="Hips" type="BoneAttachment3D" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(2107998556) index="2" unique_id=1890689589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47157976, 0)
+[node name="Hips" type="BoneAttachment3D" parent="MilesRig/Skeleton3D" parent_id_path=PackedInt32Array(284267501) index="2" unique_id=1890689589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31418136, 0)
 bone_name = "Hips"
 bone_idx = 1
 
@@ -68,7 +58,7 @@ collision_mask = 61440
 shape = SubResource("SphereShape3D_dli5y")
 debug_color = Color(0.9105971, 0.00010511756, 0.73122466, 0.41960785)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1234836790]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1251921056]
 autoplay = &"Idle"
 playback_default_blend_time = 0.5
 

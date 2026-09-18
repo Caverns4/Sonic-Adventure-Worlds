@@ -2,7 +2,8 @@ shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_disabled, vertex_lighting;
 
 uniform sampler2D albedo_tex: source_color;
-uniform vec3 albedo_color : source_color;
+uniform vec3 albedo_color : source_color = vec3(1,1,1);
+uniform float alpha : hint_range(0.0, 1.0, 0.1) = 1.0;
 
 void fragment() {
 	vec3 n = normalize(NORMAL);
@@ -18,4 +19,5 @@ void fragment() {
 
 	ALBEDO = albedo_color * reflection;
 	SPECULAR = 0.0;
+	ALPHA = alpha;
 }

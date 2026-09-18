@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://2tp0s831sdde" path="res://assets/levels/GHZ/GreenHillTest.glb" id="2_afk4w"]
 [ext_resource type="AudioStream" uid="uid://b2l3dsy31xtjf" path="res://audio/music/g_hill.ogg" id="2_dtv4y"]
 [ext_resource type="Script" uid="uid://b5pdhyoq3i50q" path="res://scripts/death_plane.gd" id="6_dtv4y"]
+[ext_resource type="PackedScene" uid="uid://hv08sofos5pc" path="res://entitites/generic_objects/item_box.tscn" id="7_bsto3"]
 [ext_resource type="PackedScene" uid="uid://bylfuoelb7mxn" path="res://assets/levels/GHZ/Objects/GHZTree.glb" id="9_2kmdv"]
 [ext_resource type="PackedScene" uid="uid://35rubp4wfliu" path="res://entitites/generic_objects/ring.tscn" id="9_4uo7t"]
 [ext_resource type="PackedScene" uid="uid://dywunkm3nx6eo" path="res://entitites/generic_objects/dashpanel.tscn" id="9_bsto3"]
@@ -200,6 +201,9 @@ script = ExtResource("6_dtv4y")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, -15, 120.5)
 shape = SubResource("BoxShape3D_dtv4y")
 debug_color = Color(0.8392157, 0, 0.09803922, 1)
+
+[node name="ItemBox" parent="ObjectsContainer" unique_id=1988331417 instance=ExtResource("7_bsto3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1.25, -55)
 
 [node name="LevelContainer" type="Node3D" parent="." unique_id=1627768696]
 
