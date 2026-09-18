@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djs8d0nlpthfk"
-path.s3tc="res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.s3tc.ctex"
+path="res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "54408a7291840d981a7674ceb02be15c"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/characters/Eggman/egtx_03.png"
-dest_files=["res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.s3tc.ctex"]
+dest_files=["res://.godot/imported/egtx_03.png-d8055f31176df37a0ffe3802f365acd9.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +26,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

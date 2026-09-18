@@ -34,6 +34,9 @@ roughness = 0.3
 emission_enabled = true
 emission = Color(0.34510693, 0.3451066, 4.3317675e-07, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_fw32x"]
+radius = 0.22
+
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ip7d3"]
 properties/0/path = NodePath(".:rotation")
 properties/0/spawn = true
@@ -166,6 +169,20 @@ settings/0/joints/1/bone_name = "Physics.End"
 settings/0/joints/1/bone = 11
 settings/0/enable_all_child_collisions = false
 settings/0/collision_count = 0
+
+[node name="Hips" type="BoneAttachment3D" parent="SonicRig/Skeleton3D" index="8" unique_id=123413830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47157976, 0)
+bone_name = "Hips"
+bone_idx = 1
+
+[node name="RollHitbox" type="Area3D" parent="SonicRig/Skeleton3D/Hips" index="0" unique_id=694653416]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 6.334204e-15, 1.4210855e-14, 6.801363e-15, 1, 0, 0, 0)
+collision_layer = 0
+collision_mask = 61440
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SonicRig/Skeleton3D/Hips/RollHitbox" index="0" unique_id=1195470615]
+shape = SubResource("SphereShape3D_fw32x")
+debug_color = Color(0.9105971, 0.00010511756, 0.73122466, 0.41960785)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1668907501]
 playback_default_blend_time = 0.2
